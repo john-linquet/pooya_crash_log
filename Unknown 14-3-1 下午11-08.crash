@@ -1,0 +1,109 @@
+Incident Identifier: 121CA403-E160-4852-9E14-0544D0D0EBB6
+CrashReporter Key:   09355f89b1d4b057e6150abaca1a8bfcdb6b7d2f
+Hardware Model:      iPhone4,1
+OS Version:          iPhone OS 7.0.2 (11A501)
+Kernel Version:      Darwin Kernel Version 14.0.0: Mon Sep  9 20:49:01 PDT 2013; root:xnu-2423.1.74~2/RELEASE_ARM_S5L8940X
+Date:                2014-03-02 08:08:15 +0100
+Time since snapshot: 69 ms
+
+Free pages:                              1993
+Active pages:                            13329
+Inactive pages:                          6154
+Speculative pages:                       816
+Throttled pages:                         84638
+Purgeable pages:                         0
+Wired pages:                             22928
+File-backed pages:                       18147
+Anonymous pages:                         2152
+Compressions:                            0
+Decompressions:                          0
+Compressor Size:                         0
+Uncompressed Pages in Compressor:        0
+Largest process:   TetrisBlitzApp
+
+Processes
+     Name                    <UUID>                       rpages       recent_max   fds      [reason]          (state)
+
+softwarebehavior <25bd80a6e3c6336a84a87fc0fac52e75>          128              128   50   [vm-pageshortage]  (daemon) (idle)
+storebookkeeperd <5cc8af4f61693233a3103b87266599f1>          233              233  100   [vm-pageshortage]  (daemon) (idle)
+AppleIDAuthAgent <8db18cf47ced3bff9f627583f0e5b03f>          132              132  100   [vm-pageshortage]  (daemon) (idle)
+com.apple.Mobile <1187edea6a4f3852ad7462854333eb60>          133              133  200   [vm-pageshortage]  (daemon) (idle)
+            xpcd <b07169919d7a3c0181226cada9243890>          202              202  200   [vm-pageshortage]  (daemon) (idle)
+com.apple.Mobile <ff1069abfbac387abcc719fe0e330279>          112              112  200   [vm-pageshortage]  (daemon) (idle)
+           Perch <10d71d2eb55a38bdb3b5bf02905ed646>         1242             1242  200   [vm-pageshortage]  (suspended)
+           Skype <00dba75a86dc31fdaaffba9e42a9659c>         1867             1867  200   [vm-pageshortage]  (suspended)
+ SiriViewService <f259dab66d253053b6425e1dd3357a3e>          601              601  200                      (suspended)
+ MobileSlideShow <9a52e5262c22375c8ae61743865c5325>         1544             1544  200                      (suspended)
+mobile_installat <48c49005166d3854a06fdc84212dc932>          142              142  200                      (daemon) (idle)
+         deleted <dc522f37dbd03877ac58f888d6376b05>          508              508  200                      (daemon) (idle)
+   medialibraryd <66efc1abf4d8350da76306ecb2d7b7be>          305              305  100                      (daemon) (idle)
+            afcd <b331b53aa4d03fd9977aa2875a51d860>          108              108  200                      (daemon) (idle)
+notification_pro <88677abe839133079fe07eb0ab3cc239>          110              110  200                      (daemon) (idle)
+             sbd <c14c31c8d06b37c9b4314e7e7dc49dbc>          147              147  200                      (daemon) (idle)
+      librariand <2a778fa50c15388eac6c7a9a90d96a6d>          225              225  200                      (daemon) (idle)
+            absd <68d84c806fe63d129950dd1f62db5569>           98               98  200                      (daemon) (idle)
+ softwareupdated <23095fd7239e3f9e97558599dca852f0>          128              128   50                      (daemon) (idle)
+         assetsd <a8237b36abaa381cbc1c772efc427a19>         2281             2281  200                      (daemon) (idle)
+        BlueTool <d4af99a0e9df330e821b99a2fc722b94>          112              112  200                      (daemon) (idle)
+    mobileassetd <e2635a89e3053a998dcb446a4719097b>          411              411  200                      (daemon) (idle)
+            geod <2480acb1bd583f0ead0813edc117d0bf>          568              568  100                      (daemon) (idle)
+       accountsd <f04ef20b3f843c1ca35d48a49b649453>          479              479  100                      (daemon) (idle)
+     Preferences <9f898f50e9f23df98a9483ebf6bab73c>         1615             1615  200                      (suspended)
+MobileGestaltHel <aac77cba43d232d89b9c542b4d4182dd>          133              133  100                      (daemon) (idle)
+             lsd <6d18904feeb23aaaadd51c5b53459cfa>          158              158  100                      (daemon) (idle)
+            xpcd <b07169919d7a3c0181226cada9243890>          204              204  100                      (daemon) (idle)
+coresymbolicatio <3e52cde3f73d3637b11b445859b2b96e>           91               91  200                      (daemon) (idle)
+       securityd <c8d65c19a20b3c5e9cb2e62b8d6256d2>          858              858  100                      (daemon) (idle)
+IMDPersistenceAg <49acced248083060b2f76a53324481c4>          188              188  200                      (daemon) (idle)
+softwareupdatese <ae264affad9f32ca8e181b3db31f2e58>          419              419  200                      (daemon) (idle)
+           timed <d015e8fa7481324493c5e411e5119a0f>          298              298   50                      (daemon) (idle)
+         tzlinkd <f7d7da6329fc3b758fe5754976ce0653>           72               72  200                      (daemon) (idle)
+    itunescloudd <c4cd7c45c89e3cf39f7cd35118640da6>          400              400  100                      (daemon) (idle)
+    Linquet Mini <0e1d2afe8c7436888986f8c009392b5a>         5952             5952  200                      (suspended)
+networkd_privile <a40deafd5d0d37d1adbc8b1e87f16968>           89               89  100                      (daemon) (idle)
+            adid <4fb1cc1b7cd43a0196ce882c4f202839>          109              109  200                      (daemon) (idle)
+        installd <d7ea9367403639c98515209d87548407>          191              191  100                      (daemon) (idle)
+        sandboxd <570249cc1c3e3af0bf3b434ef1dbc14b>          119              119  100                      (daemon) (idle)
+        routined <57090030c5163f9e831c03596f3eefab>          453              453   50                      (daemon) (idle)
+  TetrisBlitzApp <c1bed2f433e6319b94774c9e615b5462>        30365            30464  200                      (suspended)
+         DuetLST <7f66c15d03df3401ba12839365f43a06>          580              580  100                      (daemon) (idle)
+    itunesstored <d4a11213f37b3508b38100c732d1c75d>         1051             1051  100                      (daemon) (idle)
+         keybagd <a33e7d066a6d37debf976ccae0c9aac8>          143              143   50                      (daemon) (idle)
+   wirelessproxd <f48d51accca63536b24cb7e33234f664>          170              170  100                      (daemon) (idle)
+      MobileMail <9df62f037a853d13afe032c0ff7b2e53>          918              918  200                      (resume) (continuous)
+      aosnotifyd <8a5cae42386c32399964b13253594716>          430              430   50                      (daemon)
+            tccd <5d176f3fa0a73cda9cf741fa7c5f3ddd>          176              176  200                      (daemon)
+             kbd <34ad2c06d10832b393f64aab90d42a16>          450              450  200                      (daemon)
+identityservices <fc1ac3a33b7c3cfc99ed02cd24838954>          387              387  100                      (daemon)
+           wifid <3fc36c504ef0389daa88eb927d4c4974>          450              450   25                      (daemon)
+         syslogd <6539f4cf4dcf34daadf1d99991926680>          140              140   50                      (daemon)
+          powerd <1439c7f9d27636d1a05f6d63ffdb01ae>          119              119  100                      (daemon)
+             vmd <32b7628b238a3e69a6782302e974cef1>          285              285  100                      (daemon)
+       locationd <8c3fd79db6d03e6bac2823f1a9e1f4a3>         1298             1298  100                      (daemon)
+         imagent <e30a911d7058328bb5a4df6eeca02475>          304              304  100                      (daemon)
+   iaptransportd <571be8c158593dc1b64b5b2bf77fb71f>          206              206   50                      (daemon)
+    mediaserverd <1cc3db4d15443f2a922e21964a5157a9>          803              803   50                      (daemon)
+   mDNSResponder <3478dcbb6b6e3715a0af5e4204ee0638>          197              197  100                      (daemon)
+            apsd <b788f8259db83db1908342f30fd3af38>          403              403  100                      (daemon)
+     dataaccessd <034b9312b4173084ade2d4e4659f0e5d>          737              737  200                      (daemon)
+      calaccessd <a62aa76fee96371eb2fc93c856f0ffdf>          399              399  200                      (daemon)
+    mediaremoted <630be83768803e72b9f69ba5c7651480>          209              209   50                      (daemon)
+     SpringBoard <73ecb7d5797b3d22aea8cb9989c14604>        17848            17848  100                     
+      backboardd <4f9c7d444d8f3a13976c59a8f2fc48e1>         6056             6056   50                      (daemon)
+    fairplayd.H1 <02c44e8f3fb83db8b9523e3a20d155e3>          139              139   50                      (daemon)
+         configd <d8966861f1703025b1b30662c8a2da92>          654              654  100                      (daemon)
+       lockdownd <a34ff74e36ae3ad195e44442205d183e>          194              194  100                      (daemon)
+       fseventsd <5307ebb60cbe3cf59cb7a403834a473f>          293              293  100                      (daemon)
+       distnoted <527e54d80f2332b68df7e5c61b72c3d0>          143              143  100                      (daemon)
+        networkd <91366d631fe039e59afb43f1ab726640>         3052             3052  100      [highwater]     (daemon)
+      aggregated <f06d02b7f33938d59a2104c3afc0e26a>          533              533   50                      (daemon)
+  UserEventAgent <c30ed974c559399ba3875434d15e406d>          450              450  100                      (daemon)
+             ubd <7b40272a478c3d1f98892ac9b70ad127>          498              498  100                      (daemon)
+filecoordination <1707e1650580340f9abbf60be1c63b19>          131              131  200                      (daemon)
+        BTServer <328f424993d03df0a18813eff25b4959>          442              442  200                      (daemon)
+      BTLEServer <a5b279e0bf5f3cc5a3fbbd8a8fb07bf3>          172              172  200                      (daemon)
+     touchsetupd <f3404599029333e98ac3202eb090aa70>          164              164  200                      (daemon)
+      CommCenter <0961d31ba7713402a2a5c7f950997151>          841              841  100                      (daemon)
+         notifyd <35afacabfed73771889e72a017479709>          200              200  100                      (daemon)
+
+**End**

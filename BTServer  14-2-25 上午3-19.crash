@@ -1,0 +1,310 @@
+Incident Identifier: D048A7CF-252E-4DCD-B59B-8513F6DCB8AF
+CrashReporter Key:   09355f89b1d4b057e6150abaca1a8bfcdb6b7d2f
+Hardware Model:      iPhone4,1
+Process:             BTServer [553]
+Path:                /usr/sbin/BTServer
+Identifier:          BTServer
+Version:             ???
+Code Type:           ARM (Native)
+Parent Process:      launchd [1]
+
+Date/Time:           2014-02-25 12:19:27.940 +0100
+OS Version:          iOS 7.0.2 (11A501)
+Report Version:      104
+
+Exception Type:  EXC_BAD_ACCESS (SIGSEGV)
+Exception Subtype: KERN_INVALID_ADDRESS at 0xbd15dead
+Triggered by Thread:  5
+
+Thread 0:
+0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
+1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
+2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
+3   CoreFoundation                	0x30c0ef32 0x30b72000 + 642866
+4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
+5   CoreFoundation                	0x30bbd7fe 0x30b72000 + 309246
+6   BTServer                      	0x000b02ae 0xad000 + 12974
+7   libdyld.dylib                 	0x3b526ab4 0x3b525000 + 6836
+
+Thread 1:
+0   libsystem_kernel.dylib        	0x3b5ca83c 0x3b5ca000 + 2108
+1   libdispatch.dylib             	0x3b50b220 0x3b500000 + 45600
+2   libdispatch.dylib             	0x3b50afa6 0x3b500000 + 44966
+
+Thread 2:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x000bfb14 0xad000 + 76564
+3   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+4   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+5   libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 3:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x000c0aa2 0xad000 + 80546
+3   BTServer                      	0x0015fba2 0xad000 + 732066
+4   BTServer                      	0x001b8d3e 0xad000 + 1097022
+5   BTServer                      	0x001b7f64 0xad000 + 1093476
+6   BTServer                      	0x000fc472 0xad000 + 324722
+7   BTServer                      	0x00100ce2 0xad000 + 343266
+8   BTServer                      	0x000ef1e4 0xad000 + 270820
+9   BTServer                      	0x000f3e9a 0xad000 + 290458
+10  BTServer                      	0x000f3dc6 0xad000 + 290246
+11  BTServer                      	0x000eaf80 0xad000 + 253824
+12  BTServer                      	0x000eb086 0xad000 + 254086
+13  BTServer                      	0x000e9312 0xad000 + 246546
+14  BTServer                      	0x000c1c0e 0xad000 + 85006
+15  BTServer                      	0x000bda14 0xad000 + 68116
+16  libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+17  libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+18  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 4:
+0   libsystem_kernel.dylib        	0x3b5dcf38 0x3b5ca000 + 77624
+1   libsystem_pthread.dylib       	0x3b645224 0x3b643000 + 8740
+2   libsystem_pthread.dylib       	0x3b646000 0x3b643000 + 12288
+3   BTServer                      	0x000bfcd8 0xad000 + 77016
+4   BTServer                      	0x000f34da 0xad000 + 287962
+5   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+6   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+7   libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 5 name:  StackMgr HeartBeat
+Thread 5 Crashed:
+0   BTServer                      	0x000bfd54 0xad000 + 77140
+1   BTServer                      	0x0015ae7c 0xad000 + 712316
+2   BTServer                      	0x0014bc10 0xad000 + 650256
+3   BTServer                      	0x0015fd9c 0xad000 + 732572
+4   BTServer                      	0x0015fd48 0xad000 + 732488
+5   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+6   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+7   libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 6 name:  LeObserver
+Thread 6:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x0015fb0e 0xad000 + 731918
+3   BTServer                      	0x001bf6a8 0xad000 + 1124008
+4   BTServer                      	0x001c0dd0 0xad000 + 1129936
+5   BTServer                      	0x0014bc10 0xad000 + 650256
+6   BTServer                      	0x0015fd9c 0xad000 + 732572
+7   BTServer                      	0x0015fd48 0xad000 + 732488
+8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 7 name:  AppManager
+Thread 7:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x000c0aa2 0xad000 + 80546
+3   BTServer                      	0x0015fba2 0xad000 + 732066
+4   BTServer                      	0x001cb022 0xad000 + 1171490
+5   BTServer                      	0x0014bc10 0xad000 + 650256
+6   BTServer                      	0x0015fd9c 0xad000 + 732572
+7   BTServer                      	0x0015fd48 0xad000 + 732488
+8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 8:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x000c0aa2 0xad000 + 80546
+3   BTServer                      	0x0015fba2 0xad000 + 732066
+4   BTServer                      	0x001b858e 0xad000 + 1095054
+5   BTServer                      	0x001cd2b4 0xad000 + 1180340
+6   BTServer                      	0x001c7b9c 0xad000 + 1158044
+7   BTServer                      	0x000b152e 0xad000 + 17710
+8   BTServer                      	0x000b2d8e 0xad000 + 23950
+9   libxpc.dylib                  	0x3b6533aa 0x3b64f000 + 17322
+10  libxpc.dylib                  	0x3b65193e 0x3b64f000 + 10558
+11  libdispatch.dylib             	0x3b50bd42 0x3b500000 + 48450
+12  libdispatch.dylib             	0x3b508256 0x3b500000 + 33366
+13  libdispatch.dylib             	0x3b50bf8c 0x3b500000 + 49036
+14  libdispatch.dylib             	0x3b508256 0x3b500000 + 33366
+15  libdispatch.dylib             	0x3b508096 0x3b500000 + 32918
+16  libdispatch.dylib             	0x3b508d12 0x3b500000 + 36114
+17  libdispatch.dylib             	0x3b508f88 0x3b500000 + 36744
+18  libsystem_pthread.dylib       	0x3b643dbc 0x3b643000 + 3516
+19  libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+
+Thread 9 name:  LeConnectionManager
+Thread 9:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x0015fb0e 0xad000 + 731918
+3   BTServer                      	0x001b9e08 0xad000 + 1101320
+4   BTServer                      	0x001ba276 0xad000 + 1102454
+5   BTServer                      	0x001bc042 0xad000 + 1110082
+6   BTServer                      	0x0014bc10 0xad000 + 650256
+7   BTServer                      	0x0015fd9c 0xad000 + 732572
+8   BTServer                      	0x0015fd48 0xad000 + 732488
+9   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+10  libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+11  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 10 name:  BT EventDispatcher
+Thread 10:
+0   libsystem_kernel.dylib        	0x3b5dcfa8 0x3b5ca000 + 77736
+1   libsystem_pthread.dylib       	0x3b643f0a 0x3b643000 + 3850
+2   BTServer                      	0x000c0aa2 0xad000 + 80546
+3   BTServer                      	0x0015fba2 0xad000 + 732066
+4   BTServer                      	0x001b8b5e 0xad000 + 1096542
+5   BTServer                      	0x001aa56e 0xad000 + 1037678
+6   BTServer                      	0x0014bc10 0xad000 + 650256
+7   BTServer                      	0x0015fd9c 0xad000 + 732572
+8   BTServer                      	0x0015fd48 0xad000 + 732488
+9   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
+10  libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
+11  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+
+Thread 5 crashed with ARM Thread State (32-bit):
+    r0: 0xbd15dead    r1: 0x00000000      r2: 0x0000d000      r3: 0x00002860
+    r4: 0x00000069    r5: 0x16d32740      r6: 0x0011962d      r7: 0x0225ded4
+    r8: 0x000000dc    r9: 0x00000001     r10: 0x16d32da0     r11: 0x16e2d850
+    ip: 0x3d444c98    sp: 0x0225ded0      lr: 0x00000000      pc: 0x000bfd54
+  cpsr: 0x40000030
+
+Binary Images:
+0xad000 - 0x208fff BTServer armv7  <328f424993d03df0a18813eff25b4959> /usr/sbin/BTServer
+0x2be94000 - 0x2beb4fff dyld armv7  <b37cba000c7d3f8ea414f060d45ce144> /usr/lib/dyld
+0x2fa58000 - 0x2fb59fff AVFoundation armv7  <39f278dd2b283938a6226d5ef0dbf1d6> /System/Library/Frameworks/AVFoundation.framework/AVFoundation
+0x2fb5a000 - 0x2fb82fff libAVFAudio.dylib armv7  <1ae10e49b1453974b8621bd0c392bfd8> /System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
+0x2fb83000 - 0x2fb83fff Accelerate armv7  <8e17835efc9234da89e3080c47fad906> /System/Library/Frameworks/Accelerate.framework/Accelerate
+0x2fb8d000 - 0x2fd59fff vImage armv7  <a0e38e04253d345684ae9b6020775c4a> /System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+0x2fd5a000 - 0x2fe33fff libBLAS.dylib armv7  <98fa9344fcaf36cea0171bd98b2d4aa1> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+0x2fe34000 - 0x300ecfff libLAPACK.dylib armv7  <b3eb717cd5263db1887946fd376f5c61> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+0x300ed000 - 0x3015bfff libvDSP.dylib armv7  <37739741965d36df9f8274ecaa63da77> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+0x3015c000 - 0x3016dfff libvMisc.dylib armv7  <f24c84c7c0d43396a3c36a8dc10631b2> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+0x3016e000 - 0x3016efff vecLib armv7  <75820262401c3e648868525cca914352> /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+0x3016f000 - 0x3018efff Accounts armv7  <a7f9dbb770a935da8aeef3147008d228> /System/Library/Frameworks/Accounts.framework/Accounts
+0x30190000 - 0x301f5fff AddressBook armv7  <cf3989e9ed653dada8722b9be66ad4dc> /System/Library/Frameworks/AddressBook.framework/AddressBook
+0x3045d000 - 0x30808fff AudioToolbox armv7  <6100fcd9952c30eeb6aaa4673d28e678> /System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+0x30809000 - 0x3090efff CFNetwork armv7  <0ad158ad8b7a3716ad04ffde6081754c> /System/Library/Frameworks/CFNetwork.framework/CFNetwork
+0x3090f000 - 0x30969fff CoreAudio armv7  <6225db0da4413421aaa89153ba450c90> /System/Library/Frameworks/CoreAudio.framework/CoreAudio
+0x3096a000 - 0x30980fff CoreBluetooth armv7  <15ef0e1c84ae3dc691c2f6644b45ebaa> /System/Library/Frameworks/CoreBluetooth.framework/CoreBluetooth
+0x30981000 - 0x30b71fff CoreData armv7  <9338ccb7c0f2377196e181eb10b15ef5> /System/Library/Frameworks/CoreData.framework/CoreData
+0x30b72000 - 0x30cb4ff0 CoreFoundation armv7  <07d59682d03432968770bffefd2c815c> /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+0x30cb5000 - 0x30dd8fff CoreGraphics armv7  <17a70d032a013c06b9a4d244b100e2b3> /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+0x310fa000 - 0x31147fff CoreLocation armv7  <7dd4baf735ff3721aa471434254d2e79> /System/Library/Frameworks/CoreLocation.framework/CoreLocation
+0x3117f000 - 0x311f6fff CoreMedia armv7  <1b6527d74a8f3e479ec8cd584888f849> /System/Library/Frameworks/CoreMedia.framework/CoreMedia
+0x311f7000 - 0x3129ffff CoreMotion armv7  <2a09ac802d013dd2a55fd35fd4b13a50> /System/Library/Frameworks/CoreMotion.framework/CoreMotion
+0x312a0000 - 0x312f8fff CoreTelephony armv7  <d107caef682837db925155f5d5e8f9f2> /System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
+0x312f9000 - 0x31388fff CoreText armv7  <78fd8459373136a996acfedf16dea79e> /System/Library/Frameworks/CoreText.framework/CoreText
+0x31389000 - 0x31398fff CoreVideo armv7  <66912be625e536beb4879d4125a681e4> /System/Library/Frameworks/CoreVideo.framework/CoreVideo
+0x3155b000 - 0x31745fff Foundation armv7  <75c827267c5a3c85a3b21a9459d3c312> /System/Library/Frameworks/Foundation.framework/Foundation
+0x31923000 - 0x31979fff IOKit armv7  <61defd9f540b33ddae0da730991b2334> /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+0x3197a000 - 0x31b8bfff ImageIO armv7  <029c569d9e7d396186ced04e1a052ace> /System/Library/Frameworks/ImageIO.framework/ImageIO
+0x31e75000 - 0x31e79fff MediaAccessibility armv7  <b5462d53f10b323aaccd9d027d91b9e3> /System/Library/Frameworks/MediaAccessibility.framework/MediaAccessibility
+0x32062000 - 0x3231afff MediaToolbox armv7  <6ff5daf2db02368b8b2012c8d6eb94e5> /System/Library/Frameworks/MediaToolbox.framework/MediaToolbox
+0x323b7000 - 0x3241afff MobileCoreServices armv7  <5d5b5ca6dd7a305688d5a4d47363d534> /System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+0x32e41000 - 0x32e49fff OpenGLES armv7  <dd01b8dc7a1539688780b2795bdf427d> /System/Library/Frameworks/OpenGLES.framework/OpenGLES
+0x32e4b000 - 0x32e4bfff libCVMSPluginSupport.dylib armv7  <c2d7372171823801bf538db28c21999f> /System/Library/Frameworks/OpenGLES.framework/libCVMSPluginSupport.dylib
+0x32e4f000 - 0x32e52fff libCoreVMClient.dylib armv7  <8ebc1381120a37f3b906460e454c053e> /System/Library/Frameworks/OpenGLES.framework/libCoreVMClient.dylib
+0x32e53000 - 0x32e5afff libGFXShared.dylib armv7  <cc38060b9cb638a8967390dbf31a0253> /System/Library/Frameworks/OpenGLES.framework/libGFXShared.dylib
+0x32e5b000 - 0x32e99fff libGLImage.dylib armv7  <03b6bdbfab203bd781022577192dd929> /System/Library/Frameworks/OpenGLES.framework/libGLImage.dylib
+0x33034000 - 0x33177fff QuartzCore armv7  <797ea739f9603601879decaf5d214372> /System/Library/Frameworks/QuartzCore.framework/QuartzCore
+0x331d1000 - 0x33211fff Security armv7  <492fcd48d4de3f29b01799ace718d3d7> /System/Library/Frameworks/Security.framework/Security
+0x3335a000 - 0x333a9fff SystemConfiguration armv7  <c939f4780d0e33679b30827d0c2ebbc5> /System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+0x33acc000 - 0x33b19fff VideoToolbox armv7  <4d2d394879a039cba6b25fa07cea3c0f> /System/Library/Frameworks/VideoToolbox.framework/VideoToolbox
+0x33eb9000 - 0x33ebdfff AggregateDictionary armv7  <f5e364909f7a3981ab4a11d492e0bdb4> /System/Library/PrivateFrameworks/AggregateDictionary.framework/AggregateDictionary
+0x3443c000 - 0x34479fff AppSupport armv7  <5faf13cdd51b3b8399d43ac919129b34> /System/Library/PrivateFrameworks/AppSupport.framework/AppSupport
+0x3459a000 - 0x345a6fff AssetsLibraryServices armv7  <68e1b5f4b98237cd8c53494c22c0c867> /System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices
+0x345a7000 - 0x345c2fff AssistantServices armv7  <516a405daf64351fa5e2b03de3db694b> /System/Library/PrivateFrameworks/AssistantServices.framework/AssistantServices
+0x345e3000 - 0x345e6fff BTLEAudioController armv7  <ccabb35548703defb187bd3e35529366> /System/Library/PrivateFrameworks/BTLEAudioController.framework/BTLEAudioController
+0x345e7000 - 0x3460afff BackBoardServices armv7  <3140ec0752c03a53ae9aa4665ce5a76e> /System/Library/PrivateFrameworks/BackBoardServices.framework/BackBoardServices
+0x3460d000 - 0x34613fff BluetoothManager armv7  <21fe3bf8507e3730a2506343aead4f98> /System/Library/PrivateFrameworks/BluetoothManager.framework/BluetoothManager
+0x34614000 - 0x34638fff Bom armv7  <c44912a597933551bb2daaeeb4bc8ce9> /System/Library/PrivateFrameworks/Bom.framework/Bom
+0x346d7000 - 0x346dffff CaptiveNetwork armv7  <3c5a761f940637db9fcd855490e66d78> /System/Library/PrivateFrameworks/CaptiveNetwork.framework/CaptiveNetwork
+0x346e0000 - 0x347b8fff Celestial armv7  <1ea75af67f003879adb414a641a48543> /System/Library/PrivateFrameworks/Celestial.framework/Celestial
+0x34905000 - 0x34910fff CommonUtilities armv7  <6da0109d9f7a3e35a832df6767e9ca22> /System/Library/PrivateFrameworks/CommonUtilities.framework/CommonUtilities
+0x349de000 - 0x349e0fff CoreAUC armv7  <ba7f999f13bf342bbd07caa06097a161> /System/Library/PrivateFrameworks/CoreAUC.framework/CoreAUC
+0x34c8f000 - 0x34c90fff CoreSurface armv7  <f0724e43692e325988fb0c7082b10dd6> /System/Library/PrivateFrameworks/CoreSurface.framework/CoreSurface
+0x34d92000 - 0x34ddefff CoreUtils armv7  <331eac8fbe9b36ffb4d9c745c15afc02> /System/Library/PrivateFrameworks/CoreUtils.framework/CoreUtils
+0x34ddf000 - 0x34de4fff CrashReporterSupport armv7  <bec9d042a104314494fb35c6c5e50382> /System/Library/PrivateFrameworks/CrashReporterSupport.framework/CrashReporterSupport
+0x34fad000 - 0x34fc2fff DataAccessExpress armv7  <b0fe11aa7fe43047a573672c8f2ab922> /System/Library/PrivateFrameworks/DataAccessExpress.framework/DataAccessExpress
+0x34ffe000 - 0x35001fff DataMigration armv7  <3dcdb64737c43efa9a54e5f6b4f465c3> /System/Library/PrivateFrameworks/DataMigration.framework/DataMigration
+0x3503e000 - 0x3505bfff EAP8021X armv7  <293c55a7d4033599b3efa0cbd764905c> /System/Library/PrivateFrameworks/EAP8021X.framework/EAP8021X
+0x35064000 - 0x3506ffff ExFAT armv7  <4bb821eb0d32387f85730dd89da93e6c> /System/Library/PrivateFrameworks/ExFAT.framework/ExFAT
+0x356f9000 - 0x35891fff GeoServices armv7  <198659e9de5a340a9e2faaf99b4485a4> /System/Library/PrivateFrameworks/GeoServices.framework/GeoServices
+0x35892000 - 0x358a1fff GraphicsServices armv7  <126bd20d3e42341b97a94adec2e2ce78> /System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+0x35cae000 - 0x35cb5fff IOMobileFramebuffer armv7  <0f503c21e04532678e42152ecf727bed> /System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/IOMobileFramebuffer
+0x35cb6000 - 0x35cbbfff IOSurface armv7  <a6746e35e609306ab5924a13a7c06916> /System/Library/PrivateFrameworks/IOSurface.framework/IOSurface
+0x35df9000 - 0x35e71fff ManagedConfiguration armv7  <ce47ec098e0e3cfbb1a110016e2dbf97> /System/Library/PrivateFrameworks/ManagedConfiguration.framework/ManagedConfiguration
+0x35e74000 - 0x35eebfff MediaControlSender armv7  <79782f06151b3262b2c86e761a585b87> /System/Library/PrivateFrameworks/MediaControlSender.framework/MediaControlSender
+0x35f23000 - 0x35f2dfff MediaRemote armv7  <45ca02d4d1e53a29abb967322b48e4ca> /System/Library/PrivateFrameworks/MediaRemote.framework/MediaRemote
+0x3608e000 - 0x36099fff MobileAsset armv7  <6bd9b552b0583e569a83e227ae3f6c14> /System/Library/PrivateFrameworks/MobileAsset.framework/MobileAsset
+0x360bd000 - 0x360c5fff MobileBluetooth armv7  <12cd92fc4c7733ccaa0add35228633ec> /System/Library/PrivateFrameworks/MobileBluetooth.framework/MobileBluetooth
+0x360e0000 - 0x360e3fff MobileInstallation armv7  <a5067b8a82063eaeb54a053d7a8f4736> /System/Library/PrivateFrameworks/MobileInstallation.framework/MobileInstallation
+0x360e4000 - 0x360ecfff MobileKeyBag armv7  <a3a2231b84183f308f4c147b80da452c> /System/Library/PrivateFrameworks/MobileKeyBag.framework/MobileKeyBag
+0x36114000 - 0x36117fff MobileSystemServices armv7  <0cb34b63981a3fbd8caafe8a09be2162> /System/Library/PrivateFrameworks/MobileSystemServices.framework/MobileSystemServices
+0x36136000 - 0x36141fff MobileWiFi armv7  <5502c072cf8633f1b4037337d3486c55> /System/Library/PrivateFrameworks/MobileWiFi.framework/MobileWiFi
+0x363b3000 - 0x363b8fff Netrb armv7  <e222d3c5f0de340baf625200c9039c96> /System/Library/PrivateFrameworks/Netrb.framework/Netrb
+0x363b9000 - 0x363befff NetworkStatistics armv7  <c810133708e0387a824d3ce5086b2f35> /System/Library/PrivateFrameworks/NetworkStatistics.framework/NetworkStatistics
+0x363dd000 - 0x363dffff OAuth armv7  <628e21140abb3ee98b7cf857dcb174f7> /System/Library/PrivateFrameworks/OAuth.framework/OAuth
+0x37119000 - 0x3713ffff PersistentConnection armv7  <17a298d9b0913e7cb463676697bf7d27> /System/Library/PrivateFrameworks/PersistentConnection.framework/PersistentConnection
+0x37733000 - 0x3773dfff ProtocolBuffer armv7  <bd82d96be4563ddfaa630a90b306972d> /System/Library/PrivateFrameworks/ProtocolBuffer.framework/ProtocolBuffer
+0x3776f000 - 0x377e3fff Quagga armv7  <6da15a6a46b13377866a103d245bb3d3> /System/Library/PrivateFrameworks/Quagga.framework/Quagga
+0x378bc000 - 0x3793cfff SAObjects armv7  <34cb1c31b57c32dc9963c7d93700afdc> /System/Library/PrivateFrameworks/SAObjects.framework/SAObjects
+0x37a35000 - 0x37a49fff SpringBoardServices armv7  <fea06e2952f03e43b6c3625e118a243a> /System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices
+0x37c5a000 - 0x37d70fff StoreServices armv7  <7d33dfa9f4ff3ceba1294fdd21a59b91> /System/Library/PrivateFrameworks/StoreServices.framework/StoreServices
+0x37e20000 - 0x37e22fff TCC armv7  <2b47e5554c8c3927bc4991388cf98834> /System/Library/PrivateFrameworks/TCC.framework/TCC
+0x38557000 - 0x3855afff UserFS armv7  <e5b8bfd317ae3447b8e3ede3b6dcc960> /System/Library/PrivateFrameworks/UserFS.framework/UserFS
+0x395d4000 - 0x395d4fff WirelessCoexManager armv7  <3c4db3637e823739841093ac84be55fe> /System/Library/PrivateFrameworks/WirelessCoexManager.framework/WirelessCoexManager
+0x395d5000 - 0x39678fff WirelessDiagnostics armv7  <ac89956f972b3c3daa9c87d89b15986e> /System/Library/PrivateFrameworks/WirelessDiagnostics.framework/WirelessDiagnostics
+0x3968b000 - 0x39693fff XPCObjects armv7  <4070b1977b213d9fb09b45ed3c7ab6ec> /System/Library/PrivateFrameworks/XPCObjects.framework/XPCObjects
+0x3a006000 - 0x3a024fff libAWDProtobufBluetooth.dylib armv7  <863269c1514830d98ff8e0f43616a2ed> /usr/lib/libAWDProtobufBluetooth.dylib
+0x3a08e000 - 0x3a0b3fff libAWDProtobufMMCS.dylib armv7  <3ff3c01ee2cd3ea0b2ba404c2f6c0690> /usr/lib/libAWDProtobufMMCS.dylib
+0x3a2a8000 - 0x3a2aefff libAWDProtobufVPN.dylib armv7  <ee71e3e9698032da886998f84926b2eb> /usr/lib/libAWDProtobufVPN.dylib
+0x3a2af000 - 0x3a2dcfff libAWDProtobufWifi.dylib armv7  <a49a17eb9e773cbe8ee9b0e735ae8d84> /usr/lib/libAWDProtobufWifi.dylib
+0x3a619000 - 0x3a62ffff libCRFSuite.dylib armv7  <8272a334233b31e3b416738002c4e865> /usr/lib/libCRFSuite.dylib
+0x3a645000 - 0x3a65afff libMobileGestalt.dylib armv7  <c6a726fb44cb30ad82b9fe6c31d83b1a> /usr/lib/libMobileGestalt.dylib
+0x3a678000 - 0x3a679fff libSystem.B.dylib armv7  <b77969e583603737b5f7ba93b9be25f8> /usr/lib/libSystem.B.dylib
+0x3a6e4000 - 0x3a710fff libTelephonyUtilDynamic.dylib armv7  <42f1e1d29ac73ef88ab6cd777425e0ff> /usr/lib/libTelephonyUtilDynamic.dylib
+0x3a859000 - 0x3a865fff libbsm.0.dylib armv7  <4859e28b9eb33c409d1afa4ad6a3b2db> /usr/lib/libbsm.0.dylib
+0x3a866000 - 0x3a86ffff libbz2.1.0.dylib armv7  <f8cc302c9e7e389d9811feb8312831cb> /usr/lib/libbz2.1.0.dylib
+0x3a870000 - 0x3a8bbfff libc++.1.dylib armv7  <f3bbaff22aea3639b1b56589a9b986e8> /usr/lib/libc++.1.dylib
+0x3a8bc000 - 0x3a8d6fff libc++abi.dylib armv7  <cc45ccea2e6735fa929bf818fd5fe368> /usr/lib/libc++abi.dylib
+0x3a8e6000 - 0x3a8edfff libcupolicy.dylib armv7  <9363fa178b453a6999c19c4ed5b80c45> /usr/lib/libcupolicy.dylib
+0x3aa46000 - 0x3ab33fff libiconv.2.dylib armv7  <7694ca0f13523dab8d4f5b5dfec6eda8> /usr/lib/libiconv.2.dylib
+0x3ab34000 - 0x3ac85fff libicucore.A.dylib armv7  <a71e02a38e223dbdb0c8509a9cd70415> /usr/lib/libicucore.A.dylib
+0x3ac8d000 - 0x3ac8dfff liblangid.dylib armv7  <d2f105737c3938c1a7afee7e7e7e4f86> /usr/lib/liblangid.dylib
+0x3ac8e000 - 0x3ac98fff liblockdown.dylib armv7  <455c91586e2b3f51ad257fda7adb6787> /usr/lib/liblockdown.dylib
+0x3afd9000 - 0x3afedfff libmis.dylib armv7  <dad51b969a24355cbcce1f64e4203eeb> /usr/lib/libmis.dylib
+0x3b016000 - 0x3b1b5fff libobjc.A.dylib armv7  <581c944534fc3772be4f246562cbf75d> /usr/lib/libobjc.A.dylib
+0x3b210000 - 0x3b27cfff libprotobuf.dylib armv7  <5adcdf31c09c3603bafe9e08787a6ed0> /usr/lib/libprotobuf.dylib
+0x3b2bb000 - 0x3b351fff libsqlite3.dylib armv7  <c650e5808f683ed49e7b87d582f510c8> /usr/lib/libsqlite3.dylib
+0x3b352000 - 0x3b39ffff libstdc++.6.dylib armv7  <cc8ef865e96135f4985fcf5836e6de69> /usr/lib/libstdc++.6.dylib
+0x3b3ca000 - 0x3b47dfff libxml2.2.dylib armv7  <057e404ab40f37b7be1c874a0e063b42> /usr/lib/libxml2.2.dylib
+0x3b4a0000 - 0x3b4acfff libz.1.dylib armv7  <65bcd248b0d137e8b6bd768dec21c9d5> /usr/lib/libz.1.dylib
+0x3b4ad000 - 0x3b4b1fff libcache.dylib armv7  <0954da4d78e2364395be033364dfc123> /usr/lib/system/libcache.dylib
+0x3b4b2000 - 0x3b4bafff libcommonCrypto.dylib armv7  <d68d65088c5c3d25a23ed15c669f92ee> /usr/lib/system/libcommonCrypto.dylib
+0x3b4bb000 - 0x3b4bffff libcompiler_rt.dylib armv7  <6448ddee896a37fbbcaa1dd9bf1214bc> /usr/lib/system/libcompiler_rt.dylib
+0x3b4c0000 - 0x3b4c6fff libcopyfile.dylib armv7  <6b81b83f9348382da81f413a486ebeca> /usr/lib/system/libcopyfile.dylib
+0x3b4c7000 - 0x3b4fffff libcorecrypto.dylib armv7  <4184d9d49baa3abdaff0ea23e1ab88fd> /usr/lib/system/libcorecrypto.dylib
+0x3b500000 - 0x3b524fff libdispatch.dylib armv7  <8797517044003c82bc32e5c3f0b2bc23> /usr/lib/system/libdispatch.dylib
+0x3b525000 - 0x3b526fff libdyld.dylib armv7  <7d033fe14ede3994bd8b2d22954957b1> /usr/lib/system/libdyld.dylib
+0x3b527000 - 0x3b527fff libkeymgr.dylib armv7  <3861c940b81c38729be115a9a96d192e> /usr/lib/system/libkeymgr.dylib
+0x3b528000 - 0x3b52efff liblaunch.dylib armv7  <df0e1c5b04ef39bc84b7faa72b842a1b> /usr/lib/system/liblaunch.dylib
+0x3b52f000 - 0x3b532fff libmacho.dylib armv7  <0720f441862c36f7af4212317e0187d8> /usr/lib/system/libmacho.dylib
+0x3b533000 - 0x3b534fff libremovefile.dylib armv7  <18a3a1b372ef3ef2baee6f893f190b88> /usr/lib/system/libremovefile.dylib
+0x3b535000 - 0x3b542fff libsystem_asl.dylib armv7  <5bacbbe4a164398899a518ceaed62a08> /usr/lib/system/libsystem_asl.dylib
+0x3b543000 - 0x3b543fff libsystem_blocks.dylib armv7  <9b849637d37d32a0a9d74468879a119b> /usr/lib/system/libsystem_blocks.dylib
+0x3b544000 - 0x3b5a6fff libsystem_c.dylib armv7  <8bee3aed784b335b947ea58efd18fe72> /usr/lib/system/libsystem_c.dylib
+0x3b5a7000 - 0x3b5a9fff libsystem_configuration.dylib armv7  <acfcdc55e6a13df99b2e6fb4d7b5657c> /usr/lib/system/libsystem_configuration.dylib
+0x3b5aa000 - 0x3b5b0fff libsystem_dnssd.dylib armv7  <ac3df397c7333f03a0efe2611f2cdc71> /usr/lib/system/libsystem_dnssd.dylib
+0x3b5b1000 - 0x3b5c9fff libsystem_info.dylib armv7  <1f4a5af043063cb3b72fa378fa896411> /usr/lib/system/libsystem_info.dylib
+0x3b5ca000 - 0x3b5e2fff libsystem_kernel.dylib armv7  <70914815e51837a88186ab169e953e1b> /usr/lib/system/libsystem_kernel.dylib
+0x3b5e3000 - 0x3b602fff libsystem_m.dylib armv7  <7f65ee6af4623db2af98332502653ad5> /usr/lib/system/libsystem_m.dylib
+0x3b603000 - 0x3b614fff libsystem_malloc.dylib armv7  <34fc1e7733133750839e4bdb4adccbac> /usr/lib/system/libsystem_malloc.dylib
+0x3b615000 - 0x3b634fff libsystem_network.dylib armv7  <630896f734dc39eab7aab778a502b126> /usr/lib/system/libsystem_network.dylib
+0x3b635000 - 0x3b63cfff libsystem_notify.dylib armv7  <c130b85a96f030febf3652c2a083f114> /usr/lib/system/libsystem_notify.dylib
+0x3b63d000 - 0x3b642fff libsystem_platform.dylib armv7  <4171679c14a831ada1cf2b16b7d54130> /usr/lib/system/libsystem_platform.dylib
+0x3b643000 - 0x3b648fff libsystem_pthread.dylib armv7  <25d8e09672333cd78db936d8e2919e54> /usr/lib/system/libsystem_pthread.dylib
+0x3b649000 - 0x3b64afff libsystem_sandbox.dylib armv7  <401d3800ef733ab596d6393e73aa5c3a> /usr/lib/system/libsystem_sandbox.dylib
+0x3b64b000 - 0x3b64dfff libsystem_stats.dylib armv7  <b0dac4be6c9839dd91045dc21d8968e0> /usr/lib/system/libsystem_stats.dylib
+0x3b64e000 - 0x3b64efff libunwind.dylib armv7  <b4083a94d4f036d7a9f76d16a0eca556> /usr/lib/system/libunwind.dylib
+0x3b64f000 - 0x3b669fff libxpc.dylib armv7  <0dd3689633b33d3c845e5e74d7f22dd2> /usr/lib/system/libxpc.dylib
