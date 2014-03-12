@@ -17,31 +17,31 @@ Exception Subtype: KERN_INVALID_ADDRESS at 0xbd15dead
 Triggered by Thread:  5
 
 Thread 0:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71f32 0x2fbd5000 + 642866
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fc207fe 0x2fbd5000 + 309246
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71f32 __CFRunLoopRun + 850
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fc207fe CFRunLoopRun + 94
 6   BTServer                      	0x0007a2ae 0x77000 + 12974
-7   libdyld.dylib                 	0x3a589ab4 0x3a588000 + 6836
+7   libdyld.dylib                 	0x3a589ab4 start + 0
 
 Thread 1:
-0   libsystem_kernel.dylib        	0x3a62d83c 0x3a62d000 + 2108
-1   libdispatch.dylib             	0x3a56e220 0x3a563000 + 45600
-2   libdispatch.dylib             	0x3a56dfa6 0x3a563000 + 44966
+0   libsystem_kernel.dylib        	0x3a62d83c kevent64 + 24
+1   libdispatch.dylib             	0x3a56e220 _dispatch_mgr_invoke + 228
+2   libdispatch.dylib             	0x3a56dfa6 _dispatch_mgr_thread$VARIANT$mp + 34
 
 Thread 2:
-0   libsystem_kernel.dylib        	0x3a63ffa8 0x3a62d000 + 77736
-1   libsystem_pthread.dylib       	0x3a6a6f0a 0x3a6a6000 + 3850
+0   libsystem_kernel.dylib        	0x3a63ffa8 __psynch_mutexwait + 24
+1   libsystem_pthread.dylib       	0x3a6a6f0a _pthread_mutex_lock + 302
 2   BTServer                      	0x00089b14 0x77000 + 76564
-3   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-4   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-5   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+3   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+4   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+5   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 3:
-0   libsystem_kernel.dylib        	0x3a63ffa8 0x3a62d000 + 77736
-1   libsystem_pthread.dylib       	0x3a6a6f0a 0x3a6a6000 + 3850
+0   libsystem_kernel.dylib        	0x3a63ffa8 __psynch_mutexwait + 24
+1   libsystem_pthread.dylib       	0x3a6a6f0a _pthread_mutex_lock + 302
 2   BTServer                      	0x0008aaa2 0x77000 + 80546
 3   BTServer                      	0x00129ba2 0x77000 + 732066
 4   BTServer                      	0x00182d3e 0x77000 + 1097022
@@ -56,19 +56,19 @@ Thread 3:
 13  BTServer                      	0x000b3312 0x77000 + 246546
 14  BTServer                      	0x0008bc0e 0x77000 + 85006
 15  BTServer                      	0x00087a14 0x77000 + 68116
-16  libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-17  libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-18  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+16  libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+17  libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+18  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 4:
-0   libsystem_kernel.dylib        	0x3a63ff38 0x3a62d000 + 77624
-1   libsystem_pthread.dylib       	0x3a6a8224 0x3a6a6000 + 8740
-2   libsystem_pthread.dylib       	0x3a6a9000 0x3a6a6000 + 12288
+0   libsystem_kernel.dylib        	0x3a63ff38 __psynch_cvwait + 24
+1   libsystem_pthread.dylib       	0x3a6a8224 _pthread_cond_wait + 536
+2   libsystem_pthread.dylib       	0x3a6a9000 pthread_cond_wait + 36
 3   BTServer                      	0x00089cd8 0x77000 + 77016
 4   BTServer                      	0x000bd4da 0x77000 + 287962
-5   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-6   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-7   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+5   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+6   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+7   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 5 name:  StackMgr HeartBeat
 Thread 5 Crashed:
@@ -77,61 +77,61 @@ Thread 5 Crashed:
 2   BTServer                      	0x00115c10 0x77000 + 650256
 3   BTServer                      	0x00129d9c 0x77000 + 732572
 4   BTServer                      	0x00129d48 0x77000 + 732488
-5   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-6   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-7   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+5   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+6   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+7   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 6:
-0   libsystem_kernel.dylib        	0x3a63ffa8 0x3a62d000 + 77736
-1   libsystem_pthread.dylib       	0x3a6a6f0a 0x3a6a6000 + 3850
+0   libsystem_kernel.dylib        	0x3a63ffa8 __psynch_mutexwait + 24
+1   libsystem_pthread.dylib       	0x3a6a6f0a _pthread_mutex_lock + 302
 2   BTServer                      	0x00129b0e 0x77000 + 731918
 3   BTServer                      	0x001896a8 0x77000 + 1124008
 4   BTServer                      	0x00189a7e 0x77000 + 1124990
 5   BTServer                      	0x00191acc 0x77000 + 1157836
 6   BTServer                      	0x0007cd8e 0x77000 + 23950
-7   libxpc.dylib                  	0x3a6b63aa 0x3a6b2000 + 17322
-8   libxpc.dylib                  	0x3a6b493e 0x3a6b2000 + 10558
-9   libdispatch.dylib             	0x3a56ed42 0x3a563000 + 48450
-10  libdispatch.dylib             	0x3a56b256 0x3a563000 + 33366
-11  libdispatch.dylib             	0x3a56ef8c 0x3a563000 + 49036
-12  libdispatch.dylib             	0x3a56b256 0x3a563000 + 33366
-13  libdispatch.dylib             	0x3a56b096 0x3a563000 + 32918
-14  libdispatch.dylib             	0x3a56bd12 0x3a563000 + 36114
-15  libdispatch.dylib             	0x3a56bf88 0x3a563000 + 36744
-16  libsystem_pthread.dylib       	0x3a6a6dbc 0x3a6a6000 + 3516
-17  libsystem_pthread.dylib       	0x3a6a6c80 0x3a6a6000 + 3200
+7   libxpc.dylib                  	0x3a6b63aa _xpc_connection_call_event_handler + 38
+8   libxpc.dylib                  	0x3a6b493e _xpc_connection_mach_event + 1818
+9   libdispatch.dylib             	0x3a56ed42 _dispatch_mach_msg_invoke$VARIANT$mp + 114
+10  libdispatch.dylib             	0x3a56b256 _dispatch_queue_drain$VARIANT$mp + 310
+11  libdispatch.dylib             	0x3a56ef8c _dispatch_mach_invoke$VARIANT$mp + 76
+12  libdispatch.dylib             	0x3a56b256 _dispatch_queue_drain$VARIANT$mp + 310
+13  libdispatch.dylib             	0x3a56b096 _dispatch_queue_invoke$VARIANT$mp + 38
+14  libdispatch.dylib             	0x3a56bd12 _dispatch_root_queue_drain + 74
+15  libdispatch.dylib             	0x3a56bf88 _dispatch_worker_thread2 + 52
+16  libsystem_pthread.dylib       	0x3a6a6dbc _pthread_wqthread + 296
+17  libsystem_pthread.dylib       	0x3a6a6c80 start_wqthread + 4
 
 Thread 7:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
 2   BTServer                      	0x00083932 0x77000 + 51506
 3   BTServer                      	0x00078eca 0x77000 + 7882
-4   libdispatch.dylib             	0x3a564d78 0x3a563000 + 7544
-5   libdispatch.dylib             	0x3a56b292 0x3a563000 + 33426
-6   libdispatch.dylib             	0x3a56b096 0x3a563000 + 32918
-7   libdispatch.dylib             	0x3a56bd12 0x3a563000 + 36114
-8   libdispatch.dylib             	0x3a56bf88 0x3a563000 + 36744
-9   libsystem_pthread.dylib       	0x3a6a6dbc 0x3a6a6000 + 3516
-10  libsystem_pthread.dylib       	0x3a6a6c80 0x3a6a6000 + 3200
+4   libdispatch.dylib             	0x3a564d78 _dispatch_call_block_and_release + 8
+5   libdispatch.dylib             	0x3a56b292 _dispatch_queue_drain$VARIANT$mp + 370
+6   libdispatch.dylib             	0x3a56b096 _dispatch_queue_invoke$VARIANT$mp + 38
+7   libdispatch.dylib             	0x3a56bd12 _dispatch_root_queue_drain + 74
+8   libdispatch.dylib             	0x3a56bf88 _dispatch_worker_thread2 + 52
+9   libsystem_pthread.dylib       	0x3a6a6dbc _pthread_wqthread + 296
+10  libsystem_pthread.dylib       	0x3a6a6c80 start_wqthread + 4
 
 Thread 8 name:  LeObserver
 Thread 8:
-0   libsystem_kernel.dylib        	0x3a63ff38 0x3a62d000 + 77624
-1   libsystem_pthread.dylib       	0x3a6a8260 0x3a6a6000 + 8800
-2   libsystem_pthread.dylib       	0x3a6a8004 0x3a6a6000 + 8196
+0   libsystem_kernel.dylib        	0x3a63ff38 __psynch_cvwait + 24
+1   libsystem_pthread.dylib       	0x3a6a8260 _pthread_cond_wait + 596
+2   libsystem_pthread.dylib       	0x3a6a8004 pthread_cond_timedwait_relative_np + 12
 3   BTServer                      	0x0008ad44 0x77000 + 81220
 4   BTServer                      	0x00129c22 0x77000 + 732194
 5   BTServer                      	0x00115a96 0x77000 + 649878
 6   BTServer                      	0x00129d9c 0x77000 + 732572
 7   BTServer                      	0x00129d48 0x77000 + 732488
-8   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-9   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-10  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+8   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 9 name:  LeConnectionManager
 Thread 9:
-0   libsystem_kernel.dylib        	0x3a63ffa8 0x3a62d000 + 77736
-1   libsystem_pthread.dylib       	0x3a6a6f0a 0x3a6a6000 + 3850
+0   libsystem_kernel.dylib        	0x3a63ffa8 __psynch_mutexwait + 24
+1   libsystem_pthread.dylib       	0x3a6a6f0a _pthread_mutex_lock + 302
 2   BTServer                      	0x00129b0e 0x77000 + 731918
 3   BTServer                      	0x00183e08 0x77000 + 1101320
 4   BTServer                      	0x00184276 0x77000 + 1102454
@@ -139,9 +139,9 @@ Thread 9:
 6   BTServer                      	0x00115c10 0x77000 + 650256
 7   BTServer                      	0x00129d9c 0x77000 + 732572
 8   BTServer                      	0x00129d48 0x77000 + 732488
-9   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-10  libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-11  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+9   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+10  libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+11  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 5 crashed with ARM Thread State (32-bit):
     r0: 0xbd15dead    r1: 0x00000000      r2: 0x00007d00      r3: 0x00002860

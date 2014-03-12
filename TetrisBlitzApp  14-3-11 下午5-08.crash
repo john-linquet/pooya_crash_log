@@ -26,17 +26,17 @@ Elapsed total CPU time (seconds): 3.830 (user 3.830, system 0.000), 18% CPU
 Elapsed application CPU time (seconds): 1.131, 5% CPU
 
 Thread 0:
-0   libsystem_kernel.dylib        	0x3a640550 0x3a62d000 + 79184
-1   libsystem_c.dylib             	0x3a5b1808 0x3a5a7000 + 43016
-2   libsystem_c.dylib             	0x3a5b1756 0x3a5a7000 + 42838
-3   QuartzCore                    	0x321a2b9a 0x32097000 + 1096602
-4   GLEngine                      	0x31e9fd40 0x31de8000 + 752960
-5   IMGSGX543GLDriver             	0x2e9b7174 0x2e9a8000 + 61812
-6   IMGSGX543GLDriver             	0x2e9ad79c 0x2e9a8000 + 22428
-7   IMGSGX543GLDriver             	0x2e9b2a18 0x2e9a8000 + 43544
-8   IMGSGX543GLDriver             	0x2e9ab824 0x2e9a8000 + 14372
-9   GLEngine                      	0x31e9fc68 0x31de8000 + 752744
-10  OpenGLES                      	0x31eaa136 0x31ea4000 + 24886
+0   libsystem_kernel.dylib        	0x3a640550 __semwait_signal + 24
+1   libsystem_c.dylib             	0x3a5b1808 nanosleep + 168
+2   libsystem_c.dylib             	0x3a5b1756 usleep + 46
+3   QuartzCore                    	0x321a2b9a native_window_begin_iosurface(_EAGLNativeWindowObject*) + 1058
+4   GLEngine                      	0x31e9fd40 gliGetNewIOSurfaceES + 52
+5   IMGSGX543GLDriver             	0x2e9b7174 sgxResolveDeferredFramebufferOffset + 92
+6   IMGSGX543GLDriver             	0x2e9ad79c sgxPatchDeferredFramebufferOffsets + 24
+7   IMGSGX543GLDriver             	0x2e9b2a18 sgxEndRender + 8
+8   IMGSGX543GLDriver             	0x2e9ab824 SubmitPackets + 20
+9   GLEngine                      	0x31e9fc68 gliPresentViewES + 164
+10  OpenGLES                      	0x31eaa136 -[EAGLContext presentRenderbuffer:] + 62
 11  TetrisBlitzApp                	0x00610a5c 0x4000 + 6343260
 12  TetrisBlitzApp                	0x0078fd70 0x4000 + 7912816
 13  TetrisBlitzApp                	0x0078feec 0x4000 + 7913196
@@ -61,221 +61,221 @@ Thread 0:
 32  TetrisBlitzApp                	0x0059fb6e 0x4000 + 5880686
 33  TetrisBlitzApp                	0x005a0242 0x4000 + 5882434
 34  TetrisBlitzApp                	0x0058d348 0x4000 + 5804872
-35  QuartzCore                    	0x320f2f2a 0x32097000 + 376618
-36  QuartzCore                    	0x320f2cd4 0x32097000 + 376020
-37  IOMobileFramebuffer           	0x34d1776a 0x34d11000 + 26474
-38  IOKit                         	0x30989d02 0x30986000 + 15618
-39  CoreFoundation                	0x2fc68e26 0x2fbd5000 + 605734
-40  CoreFoundation                	0x2fc739e4 0x2fbd5000 + 649700
-41  CoreFoundation                	0x2fc7397e 0x2fbd5000 + 649598
-42  CoreFoundation                	0x2fc72152 0x2fbd5000 + 643410
-43  CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-44  CoreFoundation                	0x2fbdcac6 0x2fbd5000 + 31430
-45  GraphicsServices              	0x348fd27e 0x348f5000 + 33406
-46  UIKit                         	0x3247ea3c 0x3240f000 + 457276
+35  QuartzCore                    	0x320f2f2a CA::Display::DisplayLinkItem::dispatch() + 94
+36  QuartzCore                    	0x320f2cd4 CA::Display::DisplayLink::dispatch_items(unsigned long long, unsigned long long, unsigned long long) + 340
+37  IOMobileFramebuffer           	0x34d1776a IOMobileFramebufferVsyncNotifyFunc + 102
+38  IOKit                         	0x30989d02 IODispatchCalloutFromCFMessage + 246
+39  CoreFoundation                	0x2fc68e26 __CFMachPortPerform + 134
+40  CoreFoundation                	0x2fc739e4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__ + 32
+41  CoreFoundation                	0x2fc7397e __CFRunLoopDoSource1 + 342
+42  CoreFoundation                	0x2fc72152 __CFRunLoopRun + 1394
+43  CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+44  CoreFoundation                	0x2fbdcac6 CFRunLoopRunInMode + 102
+45  GraphicsServices              	0x348fd27e GSEventRunModal + 134
+46  UIKit                         	0x3247ea3c UIApplicationMain + 1132
 47  TetrisBlitzApp                	0x00592510 0x4000 + 5825808
 48  TetrisBlitzApp                	0x00009f74 0x4000 + 24436
 
 Thread 1:
-0   libsystem_kernel.dylib        	0x3a62d83c 0x3a62d000 + 2108
-1   libdispatch.dylib             	0x3a56e220 0x3a563000 + 45600
-2   libdispatch.dylib             	0x3a56dfa6 0x3a563000 + 44966
+0   libsystem_kernel.dylib        	0x3a62d83c kevent64 + 24
+1   libdispatch.dylib             	0x3a56e220 _dispatch_mgr_invoke + 228
+2   libdispatch.dylib             	0x3a56dfa6 _dispatch_mgr_thread$VARIANT$mp + 34
 
 Thread 2:
-0   libsystem_kernel.dylib        	0x3a640c7c 0x3a62d000 + 81020
-1   libsystem_pthread.dylib       	0x3a6a6dc6 0x3a6a6000 + 3526
-2   libsystem_pthread.dylib       	0x3a6a6c80 0x3a6a6000 + 3200
+0   libsystem_kernel.dylib        	0x3a640c7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3a6a6dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3a6a6c80 start_wqthread + 4
 
 Thread 3:
-0   libsystem_kernel.dylib        	0x3a640c7c 0x3a62d000 + 81020
-1   libsystem_pthread.dylib       	0x3a6a6dc6 0x3a6a6000 + 3526
-2   libsystem_pthread.dylib       	0x3a6a6c80 0x3a6a6000 + 3200
+0   libsystem_kernel.dylib        	0x3a640c7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3a6a6dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3a6a6c80 start_wqthread + 4
 
 Thread 4:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71eec 0x2fbd5000 + 642796
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fc207fe 0x2fbd5000 + 309246
-6   CoreMotion                    	0x30293270 0x3025a000 + 234096
-7   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-8   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-9   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fc207fe CFRunLoopRun + 94
+6   CoreMotion                    	0x30293270 ___lldb_unnamed_function1404$$CoreMotion + 724
+7   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+8   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+9   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 5:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71eec 0x2fbd5000 + 642796
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fbdcac6 0x2fbd5000 + 31430
-6   Foundation                    	0x305c9576 0x305be000 + 46454
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fbdcac6 CFRunLoopRunInMode + 102
+6   Foundation                    	0x305c9576 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 250
 7   TetrisBlitzApp                	0x003c8c54 0x4000 + 3951700
-8   Foundation                    	0x3068be22 0x305be000 + 843298
-9   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-10  libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-11  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+8   Foundation                    	0x3068be22 __NSThread__main__ + 1058
+9   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+10  libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+11  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 6 name:  WebThread
 Thread 6:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71eec 0x2fbd5000 + 642796
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fbdcac6 0x2fbd5000 + 31430
-6   WebCore                       	0x37af6bae 0x37a37000 + 785326
-7   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-8   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-9   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fbdcac6 CFRunLoopRunInMode + 102
+6   WebCore                       	0x37af6bae RunWebThread(void*) + 414
+7   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+8   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+9   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 7 name:  com.apple.NSURLConnectionLoader
 Thread 7:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71eec 0x2fbd5000 + 642796
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fbdcac6 0x2fbd5000 + 31430
-6   Foundation                    	0x30616492 0x305be000 + 361618
-7   Foundation                    	0x3068be22 0x305be000 + 843298
-8   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-9   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-10  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fbdcac6 CFRunLoopRunInMode + 102
+6   Foundation                    	0x30616492 +[NSURLConnection(Loader) _resourceLoadLoop:] + 314
+7   Foundation                    	0x3068be22 __NSThread__main__ + 1058
+8   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 8:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71eec 0x2fbd5000 + 642796
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fbdcac6 0x2fbd5000 + 31430
-6   libAVFAudio.dylib             	0x2ebce584 0x2ebbd000 + 71044
-7   libAVFAudio.dylib             	0x2ebc2a94 0x2ebbd000 + 23188
-8   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-9   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-10  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fbdcac6 CFRunLoopRunInMode + 102
+6   libAVFAudio.dylib             	0x2ebce584 GenericRunLoopThread::Entry(void*) + 124
+7   libAVFAudio.dylib             	0x2ebc2a94 CAPThread::Entry(CAPThread*) + 176
+8   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 9 name:  JavaScriptCore::BlockFree
 Thread 9:
-0   libsystem_kernel.dylib        	0x3a63ff38 0x3a62d000 + 77624
-1   libsystem_pthread.dylib       	0x3a6a8224 0x3a6a6000 + 8740
-2   libsystem_pthread.dylib       	0x3a6a9000 0x3a6a6000 + 12288
-3   JavaScriptCore                	0x30c00d58 0x30bef000 + 73048
-4   JavaScriptCore                	0x30bfe3a8 0x30bef000 + 62376
-5   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-6   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-7   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a63ff38 __psynch_cvwait + 24
+1   libsystem_pthread.dylib       	0x3a6a8224 _pthread_cond_wait + 536
+2   libsystem_pthread.dylib       	0x3a6a9000 pthread_cond_wait + 36
+3   JavaScriptCore                	0x30c00d58 JSC::BlockAllocator::blockFreeingThreadMain() + 204
+4   JavaScriptCore                	0x30bfe3a8 WTF::wtfThreadEntryPoint(void*) + 12
+5   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+6   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+7   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 10 name:  JavaScriptCore::Marking
 Thread 10:
-0   libsystem_kernel.dylib        	0x3a63ff38 0x3a62d000 + 77624
-1   libsystem_pthread.dylib       	0x3a6a8224 0x3a6a6000 + 8740
-2   libsystem_pthread.dylib       	0x3a6a9000 0x3a6a6000 + 12288
-3   JavaScriptCore                	0x30d9c23e 0x30bef000 + 1757758
-4   JavaScriptCore                	0x30d9c298 0x30bef000 + 1757848
-5   JavaScriptCore                	0x30bfe3a8 0x30bef000 + 62376
-6   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-7   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-8   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a63ff38 __psynch_cvwait + 24
+1   libsystem_pthread.dylib       	0x3a6a8224 _pthread_cond_wait + 536
+2   libsystem_pthread.dylib       	0x3a6a9000 pthread_cond_wait + 36
+3   JavaScriptCore                	0x30d9c23e JSC::GCThread::waitForNextPhase() + 74
+4   JavaScriptCore                	0x30d9c298 JSC::GCThread::gcThreadMain() + 48
+5   JavaScriptCore                	0x30bfe3a8 WTF::wtfThreadEntryPoint(void*) + 12
+6   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+7   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+8   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 11 name:  com.apple.CFSocket.private
 Thread 11:
-0   libsystem_kernel.dylib        	0x3a640440 0x3a62d000 + 78912
-1   CoreFoundation                	0x2fc77688 0x2fbd5000 + 665224
-2   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-3   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-4   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a640440 select$DARWIN_EXTSN + 20
+1   CoreFoundation                	0x2fc77688 __CFSocketManager + 480
+2   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+3   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+4   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 12:
-0   libsystem_kernel.dylib        	0x3a640550 0x3a62d000 + 79184
-1   libsystem_c.dylib             	0x3a5b1808 0x3a5a7000 + 43016
-2   libsystem_c.dylib             	0x3a5b1756 0x3a5a7000 + 42838
+0   libsystem_kernel.dylib        	0x3a640550 __semwait_signal + 24
+1   libsystem_c.dylib             	0x3a5b1808 nanosleep + 168
+2   libsystem_c.dylib             	0x3a5b1756 usleep + 46
 3   TetrisBlitzApp                	0x00543cd6 0x4000 + 5504214
-4   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-5   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-6   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+4   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+5   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+6   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 13:
-0   libsystem_kernel.dylib        	0x3a640550 0x3a62d000 + 79184
-1   libsystem_c.dylib             	0x3a5b1808 0x3a5a7000 + 43016
-2   libsystem_c.dylib             	0x3a5b1756 0x3a5a7000 + 42838
+0   libsystem_kernel.dylib        	0x3a640550 __semwait_signal + 24
+1   libsystem_c.dylib             	0x3a5b1808 nanosleep + 168
+2   libsystem_c.dylib             	0x3a5b1756 usleep + 46
 3   TetrisBlitzApp                	0x0054432e 0x4000 + 5505838
-4   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-5   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-6   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+4   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+5   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+6   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 14:
-0   libsystem_kernel.dylib        	0x3a640550 0x3a62d000 + 79184
-1   libsystem_c.dylib             	0x3a5b1808 0x3a5a7000 + 43016
+0   libsystem_kernel.dylib        	0x3a640550 __semwait_signal + 24
+1   libsystem_c.dylib             	0x3a5b1808 nanosleep + 168
 2   TetrisBlitzApp                	0x00578e26 0x4000 + 5721638
 3   TetrisBlitzApp                	0x00578838 0x4000 + 5720120
 4   TetrisBlitzApp                	0x005e43c6 0x4000 + 6161350
-5   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-6   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-7   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+5   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+6   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+7   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 15 name:  com.apple.coremedia.player.async
 Thread 15:
-0   libsystem_kernel.dylib        	0x3a62dadc 0x3a62d000 + 2780
-1   libdispatch.dylib             	0x3a56c45c 0x3a563000 + 37980
-2   MediaToolbox                  	0x310c9b4c 0x310c5000 + 19276
-3   CoreMedia                     	0x3020725c 0x301e2000 + 152156
-4   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-5   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-6   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a62dadc semaphore_wait_trap + 8
+1   libdispatch.dylib             	0x3a56c45c _dispatch_semaphore_wait_slow + 172
+2   MediaToolbox                  	0x310c9b4c fpa_AsyncMovieControlThread + 1752
+3   CoreMedia                     	0x3020725c figThreadMain + 192
+4   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+5   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+6   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 16 name:  EAAudioCore Dac
 Thread 16:
-0   libsystem_kernel.dylib        	0x3a62daf4 0x3a62d000 + 2804
+0   libsystem_kernel.dylib        	0x3a62daf4 semaphore_timedwait_trap + 8
 1   TetrisBlitzApp                	0x005e3bf8 0x4000 + 6159352
 2   TetrisBlitzApp                	0x005593f0 0x4000 + 5592048
 3   TetrisBlitzApp                	0x0055944a 0x4000 + 5592138
 4   TetrisBlitzApp                	0x00558408 0x4000 + 5587976
 5   TetrisBlitzApp                	0x005e43c6 0x4000 + 6161350
-6   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-7   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-8   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+6   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+7   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+8   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 17:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   AudioToolbox                  	0x2f5e8ebc 0x2f4c0000 + 1216188
-3   AudioToolbox                  	0x2f5ec634 0x2f4c0000 + 1230388
-4   AudioToolbox                  	0x2f51a8f0 0x2f4c0000 + 370928
-5   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-6   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-7   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   AudioToolbox                  	0x2f5e8ebc AURemoteIO::IOThread::Run() + 184
+3   AudioToolbox                  	0x2f5ec634 AURemoteIO::IOThread::Entry(void*) + 4
+4   AudioToolbox                  	0x2f51a8f0 CAPThread::Entry(CAPThread*) + 208
+5   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+6   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+7   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 18:
-0   libsystem_kernel.dylib        	0x3a640c7c 0x3a62d000 + 81020
-1   libsystem_pthread.dylib       	0x3a6a6dc6 0x3a6a6000 + 3526
-2   libsystem_pthread.dylib       	0x3a6a6c80 0x3a6a6000 + 3200
+0   libsystem_kernel.dylib        	0x3a640c7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3a6a6dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3a6a6c80 start_wqthread + 4
 
 Thread 19:
-0   libsystem_kernel.dylib        	0x3a62da8c 0x3a62d000 + 2700
-1   libsystem_kernel.dylib        	0x3a62d888 0x3a62d000 + 2184
-2   CoreFoundation                	0x2fc737c6 0x2fbd5000 + 649158
-3   CoreFoundation                	0x2fc71eec 0x2fbd5000 + 642796
-4   CoreFoundation                	0x2fbdcce2 0x2fbd5000 + 31970
-5   CoreFoundation                	0x2fbdcac6 0x2fbd5000 + 31430
-6   Foundation                    	0x305c9576 0x305be000 + 46454
-7   Foundation                    	0x3061a4ac 0x305be000 + 378028
+0   libsystem_kernel.dylib        	0x3a62da8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3a62d888 mach_msg + 44
+2   CoreFoundation                	0x2fc737c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x2fc71eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x2fbdcce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x2fbdcac6 CFRunLoopRunInMode + 102
+6   Foundation                    	0x305c9576 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 250
+7   Foundation                    	0x3061a4ac -[NSRunLoop(NSRunLoop) run] + 76
 8   TetrisBlitzApp                	0x0052f8c8 0x4000 + 5421256
-9   Foundation                    	0x3068be22 0x305be000 + 843298
-10  libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-11  libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-12  libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+9   Foundation                    	0x3068be22 __NSThread__main__ + 1058
+10  libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+11  libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+12  libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 Thread 20:
-0   libsystem_kernel.dylib        	0x3a640550 0x3a62d000 + 79184
-1   libsystem_c.dylib             	0x3a5b1808 0x3a5a7000 + 43016
-2   libsystem_c.dylib             	0x3a5b1756 0x3a5a7000 + 42838
+0   libsystem_kernel.dylib        	0x3a640550 __semwait_signal + 24
+1   libsystem_c.dylib             	0x3a5b1808 nanosleep + 168
+2   libsystem_c.dylib             	0x3a5b1756 usleep + 46
 3   TetrisBlitzApp                	0x0054556a 0x4000 + 5510506
-4   libsystem_pthread.dylib       	0x3a6a8c1a 0x3a6a6000 + 11290
-5   libsystem_pthread.dylib       	0x3a6a8b8a 0x3a6a6000 + 11146
-6   libsystem_pthread.dylib       	0x3a6a6c8c 0x3a6a6000 + 3212
+4   libsystem_pthread.dylib       	0x3a6a8c1a _pthread_body + 138
+5   libsystem_pthread.dylib       	0x3a6a8b8a _pthread_start + 98
+6   libsystem_pthread.dylib       	0x3a6a6c8c thread_start + 4
 
 No thread state (register information) available
 Binary Images:
