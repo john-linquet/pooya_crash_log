@@ -23,126 +23,126 @@ Elapsed total CPU time (seconds): 16.410 (user 16.410, system 0.000), 69% CPU
 Elapsed application CPU time (seconds): 10.775, 45% CPU
 
 Thread 0:
-0   vImage                        	0x2fb98470 0x2fb8d000 + 46192
-1   vImage                        	0x2fb911ec 0x2fb8d000 + 16876
-2   vImage                        	0x2fc9c7f4 0x2fb8d000 + 1112052
-3   vImage                        	0x2fc9c360 0x2fb8d000 + 1110880
-4   ImageIO                       	0x319af9e2 0x3197a000 + 219618
-5   ImageIO                       	0x319b8380 0x3197a000 + 254848
-6   ImageIO                       	0x319b7a74 0x3197a000 + 252532
-7   ImageIO                       	0x319aa054 0x3197a000 + 196692
-8   UIKit                         	0x335c1bf0 0x333ac000 + 2186224
-9   UIKit                         	0x33640252 0x333ac000 + 2703954
-10  UIKit                         	0x33640468 0x333ac000 + 2704488
-11  Foundation                    	0x315bf6bc 0x3155b000 + 411324
-12  Foundation                    	0x315c08aa 0x3155b000 + 415914
-13  Foundation                    	0x315c057c 0x3155b000 + 415100
-14  Foundation                    	0x315bf6bc 0x3155b000 + 411324
+0   vImage                        	0x2fb98470 vUnpremultiplyData_RGBA8888 + 264
+1   vImage                        	0x2fb911ec vImageUnpremultiplyData_RGBA8888 + 264
+2   vImage                        	0x2fc9c7f4 AnyToAnyBlock + 724
+3   vImage                        	0x2fc9c360 vImageConvert_AnyToAny + 1296
+4   ImageIO                       	0x319af9e2 GetBytesImageProvider + 854
+5   ImageIO                       	0x319b8380 writeOnePng + 2300
+6   ImageIO                       	0x319b7a74 _CGImagePluginWritePNG + 108
+7   ImageIO                       	0x319aa054 CGImageDestinationFinalize + 64
+8   UIKit                         	0x335c1bf0 UIImagePNGRepresentation + 512
+9   UIKit                         	0x33640252 -[UIImage _encodeDataWithCoder:imageName:] + 70
+10  UIKit                         	0x33640468 -[UIImage encodeWithCoder:] + 172
+11  Foundation                    	0x315bf6bc _encodeObject + 1056
+12  Foundation                    	0x315c08aa -[NSKeyedArchiver _encodeArrayOfObjects:forKey:] + 394
+13  Foundation                    	0x315c057c -[NSDictionary(NSDictionary) encodeWithCoder:] + 916
+14  Foundation                    	0x315bf6bc _encodeObject + 1056
 15  Linquet Mini                  	0x0011d070 0xf3000 + 172144
-16  Foundation                    	0x315bf6bc 0x3155b000 + 411324
-17  Foundation                    	0x315c08aa 0x3155b000 + 415914
-18  Foundation                    	0x315c057c 0x3155b000 + 415100
-19  Foundation                    	0x315bf6bc 0x3155b000 + 411324
-20  Foundation                    	0x315c5b38 0x3155b000 + 437048
+16  Foundation                    	0x315bf6bc _encodeObject + 1056
+17  Foundation                    	0x315c08aa -[NSKeyedArchiver _encodeArrayOfObjects:forKey:] + 394
+18  Foundation                    	0x315c057c -[NSDictionary(NSDictionary) encodeWithCoder:] + 916
+19  Foundation                    	0x315bf6bc _encodeObject + 1056
+20  Foundation                    	0x315c5b38 +[NSKeyedArchiver archivedDataWithRootObject:] + 152
 21  Linquet Mini                  	0x0011e7c2 0xf3000 + 178114
 22  Linquet Mini                  	0x0011c470 0xf3000 + 169072
 23  Linquet Mini                  	0x0010d3fc 0xf3000 + 107516
 24  Linquet Mini                  	0x000fad72 0xf3000 + 32114
-25  CoreFoundation                	0x30b81e7c 0x30b72000 + 65148
-26  CoreFoundation                	0x30b81da0 0x30b72000 + 64928
+25  CoreFoundation                	0x30b81e7c __65-[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:]_block_invoke + 96
+26  CoreFoundation                	0x30b81da0 -[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:] + 160
 27  Linquet Mini                  	0x000faacc 0xf3000 + 31436
 28  Linquet Mini                  	0x000fae38 0xf3000 + 32312
-29  UIKit                         	0x3348bc4c 0x333ac000 + 916556
-30  UIKit                         	0x3348de70 0x333ac000 + 925296
-31  UIKit                         	0x3348ddc8 0x333ac000 + 925128
-32  UIKit                         	0x3348d9c4 0x333ac000 + 924100
+29  UIKit                         	0x3348bc4c -[UISectionRowData refreshWithSection:tableView:tableViewRowData:] + 2392
+30  UIKit                         	0x3348de70 -[UITableViewRowData numberOfRows] + 96
+31  UIKit                         	0x3348ddc8 -[UITableView noteNumberOfRowsChanged] + 120
+32  UIKit                         	0x3348d9c4 -[UITableView reloadData] + 792
 33  Linquet Mini                  	0x000fee44 0xf3000 + 48708
 34  Linquet Mini                  	0x0010a41e 0xf3000 + 95262
-35  CoreFoundation                	0x30c0811e 0x30b72000 + 614686
-36  CoreFoundation                	0x30b7c312 0x30b72000 + 41746
-37  Foundation                    	0x31560dc8 0x3155b000 + 24008
-38  Foundation                    	0x315656a6 0x3155b000 + 42662
+35  CoreFoundation                	0x30c0811e __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 10
+36  CoreFoundation                	0x30b7c312 _CFXNotificationPost + 1714
+37  Foundation                    	0x31560dc8 -[NSNotificationCenter postNotificationName:object:userInfo:] + 72
+38  Foundation                    	0x315656a6 -[NSNotificationCenter postNotificationName:object:] + 26
 39  Linquet Mini                  	0x0011a8c0 0xf3000 + 161984
-40  CoreBluetooth                 	0x3096dda2 0x3096a000 + 15778
-41  CoreBluetooth                 	0x30975b9e 0x3096a000 + 48030
-42  libdispatch.dylib             	0x3b501d78 0x3b500000 + 7544
-43  libdispatch.dylib             	0x3b501d64 0x3b500000 + 7524
-44  libdispatch.dylib             	0x3b5087bc 0x3b500000 + 34748
-45  CoreFoundation                	0x30c1081c 0x30b72000 + 649244
-46  CoreFoundation                	0x30c0f0f0 0x30b72000 + 643312
-47  CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-48  CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-49  GraphicsServices              	0x3589a27e 0x35892000 + 33406
-50  UIKit                         	0x3341ba3c 0x333ac000 + 457276
+40  CoreBluetooth                 	0x3096dda2 -[CBCentralManager xpcConnection:didReceiveMsg:args:] + 258
+41  CoreBluetooth                 	0x30975b9e __34-[CBXpcConnection handleMsg:args:]_block_invoke + 74
+42  libdispatch.dylib             	0x3b501d78 _dispatch_call_block_and_release + 8
+43  libdispatch.dylib             	0x3b501d64 _dispatch_client_callout + 20
+44  libdispatch.dylib             	0x3b5087bc _dispatch_main_queue_callback_4CF$VARIANT$mp + 264
+45  CoreFoundation                	0x30c1081c __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 4
+46  CoreFoundation                	0x30c0f0f0 __CFRunLoopRun + 1296
+47  CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+48  CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+49  GraphicsServices              	0x3589a27e GSEventRunModal + 134
+50  UIKit                         	0x3341ba3c UIApplicationMain + 1132
 51  Linquet Mini                  	0x000f9862 0xf3000 + 26722
-52  libdyld.dylib                 	0x3b526ab4 0x3b525000 + 6836
+52  libdyld.dylib                 	0x3b526ab4 start + 0
 
 Thread 1:
-0   libsystem_kernel.dylib        	0x3b5ca83c 0x3b5ca000 + 2108
-1   libdispatch.dylib             	0x3b50b220 0x3b500000 + 45600
-2   libdispatch.dylib             	0x3b50afa6 0x3b500000 + 44966
+0   libsystem_kernel.dylib        	0x3b5ca83c kevent64 + 24
+1   libdispatch.dylib             	0x3b50b220 _dispatch_mgr_invoke + 228
+2   libdispatch.dylib             	0x3b50afa6 _dispatch_mgr_thread$VARIANT$mp + 34
 
 Thread 2:
-0   libsystem_kernel.dylib        	0x3b5ddc7c 0x3b5ca000 + 81020
-1   libsystem_pthread.dylib       	0x3b643dc6 0x3b643000 + 3526
-2   libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+0   libsystem_kernel.dylib        	0x3b5ddc7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3b643dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3b643c80 start_wqthread + 4
 
 Thread 3 name:  com.apple.NSURLConnectionLoader
 Thread 3:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-6   Foundation                    	0x315b3492 0x3155b000 + 361618
-7   Foundation                    	0x31628e22 0x3155b000 + 843298
-8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+6   Foundation                    	0x315b3492 +[NSURLConnection(Loader) _resourceLoadLoop:] + 314
+7   Foundation                    	0x31628e22 __NSThread__main__ + 1058
+8   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 4:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-6   libAVFAudio.dylib             	0x2fb6b584 0x2fb5a000 + 71044
-7   libAVFAudio.dylib             	0x2fb5fa94 0x2fb5a000 + 23188
-8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+6   libAVFAudio.dylib             	0x2fb6b584 GenericRunLoopThread::Entry(void*) + 124
+7   libAVFAudio.dylib             	0x2fb5fa94 CAPThread::Entry(CAPThread*) + 176
+8   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 5:
-0   libsystem_kernel.dylib        	0x3b5ddc7c 0x3b5ca000 + 81020
-1   libsystem_pthread.dylib       	0x3b643dc6 0x3b643000 + 3526
-2   libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+0   libsystem_kernel.dylib        	0x3b5ddc7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3b643dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3b643c80 start_wqthread + 4
 
 Thread 6:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-6   AudioToolbox                  	0x304d66a4 0x3045d000 + 497316
-7   AudioToolbox                  	0x304b78f0 0x3045d000 + 370928
-8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+6   AudioToolbox                  	0x304d66a4 GenericRunLoopThread::Entry(void*) + 124
+7   AudioToolbox                  	0x304b78f0 CAPThread::Entry(CAPThread*) + 208
+8   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 7:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30bbd7fe 0x30b72000 + 309246
-6   CoreMotion                    	0x31230270 0x311f7000 + 234096
-7   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-8   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-9   libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30bbd7fe CFRunLoopRun + 94
+6   CoreMotion                    	0x31230270 ___lldb_unnamed_function1404$$CoreMotion + 724
+7   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+8   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+9   libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 No thread state (register information) available
 Binary Images:

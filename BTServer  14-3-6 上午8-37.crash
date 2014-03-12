@@ -19,17 +19,17 @@ Triggered by Thread:  5
 Thread 0:
 0   libsystem_kernel.dylib        	0x3b832a8c mach_msg_trap + 20
 1   libsystem_kernel.dylib        	0x3b832888 mach_msg + 44
-2   CoreFoundation                	0x30e787c6 0x30dda000 + 649158
-3   CoreFoundation                	0x30e76f32 0x30dda000 + 642866
-4   CoreFoundation                	0x30de1ce2 0x30dda000 + 31970
-5   CoreFoundation                	0x30e257fe 0x30dda000 + 309246
+2   CoreFoundation                	0x30e787c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30e76f32 __CFRunLoopRun + 850
+4   CoreFoundation                	0x30de1ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30e257fe CFRunLoopRun + 94
 6   BTServer                      	0x000dd2ae 0xda000 + 12974
 7   libdyld.dylib                 	0x3b78eab4 start + 0
 
 Thread 1:
 0   libsystem_kernel.dylib        	0x3b83283c kevent64 + 24
-1   libdispatch.dylib             	0x3b773220 0x3b768000 + 45600
-2   libdispatch.dylib             	0x3b772fa6 0x3b768000 + 44966
+1   libdispatch.dylib             	0x3b773220 _dispatch_mgr_invoke + 228
+2   libdispatch.dylib             	0x3b772fa6 _dispatch_mgr_thread$VARIANT$mp + 34
 
 Thread 2:
 0   libsystem_kernel.dylib        	0x3b844fa8 __psynch_mutexwait + 24
@@ -104,13 +104,13 @@ Thread 7:
 5   BTServer                      	0x000dfd8e 0xda000 + 23950
 6   libxpc.dylib                  	0x3b8bb3aa _xpc_connection_call_event_handler + 38
 7   libxpc.dylib                  	0x3b8b993e _xpc_connection_mach_event + 1818
-8   libdispatch.dylib             	0x3b773d42 0x3b768000 + 48450
-9   libdispatch.dylib             	0x3b770256 0x3b768000 + 33366
-10  libdispatch.dylib             	0x3b773f8c 0x3b768000 + 49036
-11  libdispatch.dylib             	0x3b770256 0x3b768000 + 33366
-12  libdispatch.dylib             	0x3b770096 0x3b768000 + 32918
-13  libdispatch.dylib             	0x3b770d12 0x3b768000 + 36114
-14  libdispatch.dylib             	0x3b770f88 0x3b768000 + 36744
+8   libdispatch.dylib             	0x3b773d42 _dispatch_mach_msg_invoke$VARIANT$mp + 114
+9   libdispatch.dylib             	0x3b770256 _dispatch_queue_drain$VARIANT$mp + 310
+10  libdispatch.dylib             	0x3b773f8c _dispatch_mach_invoke$VARIANT$mp + 76
+11  libdispatch.dylib             	0x3b770256 _dispatch_queue_drain$VARIANT$mp + 310
+12  libdispatch.dylib             	0x3b770096 _dispatch_queue_invoke$VARIANT$mp + 38
+13  libdispatch.dylib             	0x3b770d12 _dispatch_root_queue_drain + 74
+14  libdispatch.dylib             	0x3b770f88 _dispatch_worker_thread2 + 52
 15  libsystem_pthread.dylib       	0x3b8abdbc _pthread_wqthread + 296
 16  libsystem_pthread.dylib       	0x3b8abc80 start_wqthread + 4
 
@@ -135,11 +135,11 @@ Thread 9:
 2   BTServer                      	0x000edaa2 0xda000 + 80546
 3   BTServer                      	0x0018cba2 0xda000 + 732066
 4   BTServer                      	0x001f5b70 0xda000 + 1162096
-5   libdispatch.dylib             	0x3b769d78 0x3b768000 + 7544
-6   libdispatch.dylib             	0x3b770292 0x3b768000 + 33426
-7   libdispatch.dylib             	0x3b770096 0x3b768000 + 32918
-8   libdispatch.dylib             	0x3b770d12 0x3b768000 + 36114
-9   libdispatch.dylib             	0x3b770f88 0x3b768000 + 36744
+5   libdispatch.dylib             	0x3b769d78 _dispatch_call_block_and_release + 8
+6   libdispatch.dylib             	0x3b770292 _dispatch_queue_drain$VARIANT$mp + 370
+7   libdispatch.dylib             	0x3b770096 _dispatch_queue_invoke$VARIANT$mp + 38
+8   libdispatch.dylib             	0x3b770d12 _dispatch_root_queue_drain + 74
+9   libdispatch.dylib             	0x3b770f88 _dispatch_worker_thread2 + 52
 10  libsystem_pthread.dylib       	0x3b8abdbc _pthread_wqthread + 296
 11  libsystem_pthread.dylib       	0x3b8abc80 start_wqthread + 4
 
@@ -157,13 +157,13 @@ Thread 10:
 10  BTServer                      	0x000dfd8e 0xda000 + 23950
 11  libxpc.dylib                  	0x3b8bb3aa _xpc_connection_call_event_handler + 38
 12  libxpc.dylib                  	0x3b8b993e _xpc_connection_mach_event + 1818
-13  libdispatch.dylib             	0x3b773d42 0x3b768000 + 48450
-14  libdispatch.dylib             	0x3b770256 0x3b768000 + 33366
-15  libdispatch.dylib             	0x3b773f8c 0x3b768000 + 49036
-16  libdispatch.dylib             	0x3b770256 0x3b768000 + 33366
-17  libdispatch.dylib             	0x3b770096 0x3b768000 + 32918
-18  libdispatch.dylib             	0x3b770d12 0x3b768000 + 36114
-19  libdispatch.dylib             	0x3b770f88 0x3b768000 + 36744
+13  libdispatch.dylib             	0x3b773d42 _dispatch_mach_msg_invoke$VARIANT$mp + 114
+14  libdispatch.dylib             	0x3b770256 _dispatch_queue_drain$VARIANT$mp + 310
+15  libdispatch.dylib             	0x3b773f8c _dispatch_mach_invoke$VARIANT$mp + 76
+16  libdispatch.dylib             	0x3b770256 _dispatch_queue_drain$VARIANT$mp + 310
+17  libdispatch.dylib             	0x3b770096 _dispatch_queue_invoke$VARIANT$mp + 38
+18  libdispatch.dylib             	0x3b770d12 _dispatch_root_queue_drain + 74
+19  libdispatch.dylib             	0x3b770f88 _dispatch_worker_thread2 + 52
 20  libsystem_pthread.dylib       	0x3b8abdbc _pthread_wqthread + 296
 21  libsystem_pthread.dylib       	0x3b8abc80 start_wqthread + 4
 

@@ -26,10 +26,10 @@ Elapsed total CPU time (seconds): 16.790 (user 16.790, system 0.000), 77% CPU
 Elapsed application CPU time (seconds): 9.569, 44% CPU
 
 Thread 0:
-0   CoreFoundation                	0x30e87b98 0x30dda000 + 711576
-1   CoreFoundation                	0x30ddf3c2 0x30dda000 + 21442
-2   CoreFoundation                	0x30ddb7f8 0x30dda000 + 6136
-3   CoreFoundation                	0x30ddb09e 0x30dda000 + 4254
+0   CoreFoundation                	0x30e87b98 __CFStringEqual + 208
+1   CoreFoundation                	0x30ddf3c2 CFEqual + 186
+2   CoreFoundation                	0x30ddb7f8 CFBasicHashFindBucket + 1840
+3   CoreFoundation                	0x30ddb09e CFDictionaryGetValue + 94
 4   Foundation                    	0x317d2c80 -[NSDictionary(NSKeyValueCoding) valueForKey:] + 168
 5   Foundation                    	0x317fdf28 -[NSObject(NSKeyValueCoding) setValue:forKeyPath:] + 224
 6   Foundation                    	0x317fdf3c -[NSObject(NSKeyValueCoding) setValue:forKeyPath:] + 244
@@ -90,11 +90,11 @@ Thread 0:
 61  UIKit                         	0x3364e688 -[UIWindow sendEvent:] + 828
 62  UIKit                         	0x33623a20 -[UIApplication sendEvent:] + 192
 63  UIKit                         	0x3362221c _UIApplicationHandleEventQueue + 7092
-64  CoreFoundation                	0x30e79188 0x30dda000 + 651656
-65  CoreFoundation                	0x30e78656 0x30dda000 + 648790
-66  CoreFoundation                	0x30e76e4a 0x30dda000 + 642634
-67  CoreFoundation                	0x30de1ce2 0x30dda000 + 31970
-68  CoreFoundation                	0x30de1ac6 0x30dda000 + 31430
+64  CoreFoundation                	0x30e79188 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 12
+65  CoreFoundation                	0x30e78656 __CFRunLoopDoSources0 + 202
+66  CoreFoundation                	0x30e76e4a __CFRunLoopRun + 618
+67  CoreFoundation                	0x30de1ce2 CFRunLoopRunSpecific + 518
+68  CoreFoundation                	0x30de1ac6 CFRunLoopRunInMode + 102
 69  GraphicsServices              	0x35b0227e GSEventRunModal + 134
 70  UIKit                         	0x33683a3c UIApplicationMain + 1132
 71  Linquet Mini                  	0x000eb862 0xe5000 + 26722
@@ -109,10 +109,10 @@ Thread 2 name:  com.apple.NSURLConnectionLoader
 Thread 2:
 0   libsystem_kernel.dylib        	0x3b832a8c mach_msg_trap + 20
 1   libsystem_kernel.dylib        	0x3b832888 mach_msg + 44
-2   CoreFoundation                	0x30e787c6 0x30dda000 + 649158
-3   CoreFoundation                	0x30e76eec 0x30dda000 + 642796
-4   CoreFoundation                	0x30de1ce2 0x30dda000 + 31970
-5   CoreFoundation                	0x30de1ac6 0x30dda000 + 31430
+2   CoreFoundation                	0x30e787c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30e76eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30de1ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30de1ac6 CFRunLoopRunInMode + 102
 6   Foundation                    	0x3181b492 +[NSURLConnection(Loader) _resourceLoadLoop:] + 314
 7   Foundation                    	0x31890e22 __NSThread__main__ + 1058
 8   libsystem_pthread.dylib       	0x3b8adc1a _pthread_body + 138
@@ -122,10 +122,10 @@ Thread 2:
 Thread 3:
 0   libsystem_kernel.dylib        	0x3b832a8c mach_msg_trap + 20
 1   libsystem_kernel.dylib        	0x3b832888 mach_msg + 44
-2   CoreFoundation                	0x30e787c6 0x30dda000 + 649158
-3   CoreFoundation                	0x30e76eec 0x30dda000 + 642796
-4   CoreFoundation                	0x30de1ce2 0x30dda000 + 31970
-5   CoreFoundation                	0x30de1ac6 0x30dda000 + 31430
+2   CoreFoundation                	0x30e787c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30e76eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30de1ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30de1ac6 CFRunLoopRunInMode + 102
 6   libAVFAudio.dylib             	0x2fdd3584 GenericRunLoopThread::Entry(void*) + 124
 7   libAVFAudio.dylib             	0x2fdc7a94 CAPThread::Entry(CAPThread*) + 176
 8   libsystem_pthread.dylib       	0x3b8adc1a _pthread_body + 138
@@ -135,10 +135,10 @@ Thread 3:
 Thread 4:
 0   libsystem_kernel.dylib        	0x3b832a8c mach_msg_trap + 20
 1   libsystem_kernel.dylib        	0x3b832888 mach_msg + 44
-2   CoreFoundation                	0x30e787c6 0x30dda000 + 649158
-3   CoreFoundation                	0x30e76eec 0x30dda000 + 642796
-4   CoreFoundation                	0x30de1ce2 0x30dda000 + 31970
-5   CoreFoundation                	0x30de1ac6 0x30dda000 + 31430
+2   CoreFoundation                	0x30e787c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30e76eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30de1ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30de1ac6 CFRunLoopRunInMode + 102
 6   AudioToolbox                  	0x3073e6a4 GenericRunLoopThread::Entry(void*) + 124
 7   AudioToolbox                  	0x3071f8f0 CAPThread::Entry(CAPThread*) + 208
 8   libsystem_pthread.dylib       	0x3b8adc1a _pthread_body + 138
@@ -148,10 +148,10 @@ Thread 4:
 Thread 5:
 0   libsystem_kernel.dylib        	0x3b832a8c mach_msg_trap + 20
 1   libsystem_kernel.dylib        	0x3b832888 mach_msg + 44
-2   CoreFoundation                	0x30e787c6 0x30dda000 + 649158
-3   CoreFoundation                	0x30e76eec 0x30dda000 + 642796
-4   CoreFoundation                	0x30de1ce2 0x30dda000 + 31970
-5   CoreFoundation                	0x30e257fe 0x30dda000 + 309246
+2   CoreFoundation                	0x30e787c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30e76eec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30de1ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30e257fe CFRunLoopRun + 94
 6   CoreMotion                    	0x31498270 ___lldb_unnamed_function1404$$CoreMotion + 724
 7   libsystem_pthread.dylib       	0x3b8adc1a _pthread_body + 138
 8   libsystem_pthread.dylib       	0x3b8adb8a _pthread_start + 98
@@ -160,7 +160,7 @@ Thread 5:
 Thread 6 name:  com.apple.CFSocket.private
 Thread 6:
 0   libsystem_kernel.dylib        	0x3b845440 select$DARWIN_EXTSN + 20
-1   CoreFoundation                	0x30e7c688 0x30dda000 + 665224
+1   CoreFoundation                	0x30e7c688 __CFSocketManager + 480
 2   libsystem_pthread.dylib       	0x3b8adc1a _pthread_body + 138
 3   libsystem_pthread.dylib       	0x3b8adb8a _pthread_start + 98
 4   libsystem_pthread.dylib       	0x3b8abc8c thread_start + 4

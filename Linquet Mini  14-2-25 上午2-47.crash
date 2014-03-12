@@ -17,125 +17,125 @@ Exception Subtype: KERN_INVALID_ADDRESS at 0xcc0b9c82
 Triggered by Thread:  0
 
 Thread 0 Crashed:
-0   libobjc.A.dylib               	0x3b019b36 0x3b016000 + 15158
-1   MapKit                        	0x31e12854 0x31dd2000 + 264276
-2   CoreFoundation                	0x30b9ec16 0x30b72000 + 183318
-3   MapKit                        	0x31de2876 0x31dd2000 + 67702
-4   MapKit                        	0x31de252e 0x31dd2000 + 66862
-5   MapKit                        	0x31de20d8 0x31dd2000 + 65752
-6   MapKit                        	0x31de1f02 0x31dd2000 + 65282
-7   MapKit                        	0x31de1eae 0x31dd2000 + 65198
-8   CoreLocation                  	0x311074bc 0x310fa000 + 54460
-9   CoreLocation                  	0x310fcda8 0x310fa000 + 11688
-10  CoreFoundation                	0x30c111b6 0x30b72000 + 651702
-11  CoreFoundation                	0x30c10536 0x30b72000 + 648502
-12  CoreFoundation                	0x30c0f1a4 0x30b72000 + 643492
-13  CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-14  CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-15  GraphicsServices              	0x3589a27e 0x35892000 + 33406
-16  UIKit                         	0x3341ba3c 0x333ac000 + 457276
+0   libobjc.A.dylib               	0x3b019b36 objc_msgSend + 22
+1   MapKit                        	0x31e12854 -[MKMapView(UserPositioningInternal) locationManagerUpdatedLocation:] + 1316
+2   CoreFoundation                	0x30b9ec16 -[NSArray makeObjectsPerformSelector:withObject:] + 186
+3   MapKit                        	0x31de2876 -[MKLocationManager _reportLocationStatus:] + 62
+4   MapKit                        	0x31de252e -[MKLocationManager _locationProvider:didUpdateLocation:lastKnownNavCourse:] + 1086
+5   MapKit                        	0x31de20d8 -[MKLocationManager locationProvider:didUpdateLocation:lastKnownNavCourse:] + 460
+6   MapKit                        	0x31de1f02 -[MKLocationManager locationProvider:didUpdateLocation:] + 46
+7   MapKit                        	0x31de1eae -[MKCoreLocationProvider locationManager:didUpdateLocations:] + 722
+8   CoreLocation                  	0x311074bc ___lldb_unnamed_function252$$CoreLocation + 1492
+9   CoreLocation                  	0x310fcda8 ___lldb_unnamed_function16$$CoreLocation + 160
+10  CoreFoundation                	0x30c111b6 __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 10
+11  CoreFoundation                	0x30c10536 __CFRunLoopDoBlocks + 238
+12  CoreFoundation                	0x30c0f1a4 __CFRunLoopRun + 1476
+13  CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+14  CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+15  GraphicsServices              	0x3589a27e GSEventRunModal + 134
+16  UIKit                         	0x3341ba3c UIApplicationMain + 1132
 17  Linquet Mini                  	0x000ac862 0xa6000 + 26722
-18  libdyld.dylib                 	0x3b526ab4 0x3b525000 + 6836
+18  libdyld.dylib                 	0x3b526ab4 start + 0
 
 Thread 1:
-0   libsystem_kernel.dylib        	0x3b5ca83c 0x3b5ca000 + 2108
-1   libdispatch.dylib             	0x3b50b220 0x3b500000 + 45600
-2   libdispatch.dylib             	0x3b50afa6 0x3b500000 + 44966
+0   libsystem_kernel.dylib        	0x3b5ca83c kevent64 + 24
+1   libdispatch.dylib             	0x3b50b220 _dispatch_mgr_invoke + 228
+2   libdispatch.dylib             	0x3b50afa6 _dispatch_mgr_thread$VARIANT$mp + 34
 
 Thread 2 name:  com.apple.NSURLConnectionLoader
 Thread 2:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-6   Foundation                    	0x315b3492 0x3155b000 + 361618
-7   Foundation                    	0x31628e22 0x3155b000 + 843298
-8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+6   Foundation                    	0x315b3492 +[NSURLConnection(Loader) _resourceLoadLoop:] + 314
+7   Foundation                    	0x31628e22 __NSThread__main__ + 1058
+8   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 3:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-6   libAVFAudio.dylib             	0x2fb6b584 0x2fb5a000 + 71044
-7   libAVFAudio.dylib             	0x2fb5fa94 0x2fb5a000 + 23188
-8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+6   libAVFAudio.dylib             	0x2fb6b584 GenericRunLoopThread::Entry(void*) + 124
+7   libAVFAudio.dylib             	0x2fb5fa94 CAPThread::Entry(CAPThread*) + 176
+8   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 4 name:  com.apple.CFSocket.private
 Thread 4:
-0   libsystem_kernel.dylib        	0x3b5dd440 0x3b5ca000 + 78912
-1   CoreFoundation                	0x30c14688 0x30b72000 + 665224
-2   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-3   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-4   libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5dd440 select$DARWIN_EXTSN + 20
+1   CoreFoundation                	0x30c14688 __CFSocketManager + 480
+2   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+3   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+4   libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 5:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30b79ac6 0x30b72000 + 31430
-6   AudioToolbox                  	0x304d66a4 0x3045d000 + 497316
-7   AudioToolbox                  	0x304b78f0 0x3045d000 + 370928
-8   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-9   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-10  libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30b79ac6 CFRunLoopRunInMode + 102
+6   AudioToolbox                  	0x304d66a4 GenericRunLoopThread::Entry(void*) + 124
+7   AudioToolbox                  	0x304b78f0 CAPThread::Entry(CAPThread*) + 208
+8   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+9   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+10  libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 6:
-0   libsystem_kernel.dylib        	0x3b5caa8c 0x3b5ca000 + 2700
-1   libsystem_kernel.dylib        	0x3b5ca888 0x3b5ca000 + 2184
-2   CoreFoundation                	0x30c107c6 0x30b72000 + 649158
-3   CoreFoundation                	0x30c0eeec 0x30b72000 + 642796
-4   CoreFoundation                	0x30b79ce2 0x30b72000 + 31970
-5   CoreFoundation                	0x30bbd7fe 0x30b72000 + 309246
-6   CoreMotion                    	0x31230270 0x311f7000 + 234096
-7   libsystem_pthread.dylib       	0x3b645c1a 0x3b643000 + 11290
-8   libsystem_pthread.dylib       	0x3b645b8a 0x3b643000 + 11146
-9   libsystem_pthread.dylib       	0x3b643c8c 0x3b643000 + 3212
+0   libsystem_kernel.dylib        	0x3b5caa8c mach_msg_trap + 20
+1   libsystem_kernel.dylib        	0x3b5ca888 mach_msg + 44
+2   CoreFoundation                	0x30c107c6 __CFRunLoopServiceMachPort + 150
+3   CoreFoundation                	0x30c0eeec __CFRunLoopRun + 780
+4   CoreFoundation                	0x30b79ce2 CFRunLoopRunSpecific + 518
+5   CoreFoundation                	0x30bbd7fe CFRunLoopRun + 94
+6   CoreMotion                    	0x31230270 ___lldb_unnamed_function1404$$CoreMotion + 724
+7   libsystem_pthread.dylib       	0x3b645c1a _pthread_body + 138
+8   libsystem_pthread.dylib       	0x3b645b8a _pthread_start + 98
+9   libsystem_pthread.dylib       	0x3b643c8c thread_start + 4
 
 Thread 7:
-0   libsystem_kernel.dylib        	0x3b5caaf4 0x3b5ca000 + 2804
-1   libdispatch.dylib             	0x3b509428 0x3b500000 + 37928
-2   CoreLocation                  	0x310fcc88 0x310fa000 + 11400
-3   CoreLocation                  	0x311016e8 0x310fa000 + 30440
-4   CoreLocation                  	0x3112dba8 0x310fa000 + 211880
-5   libxpc.dylib                  	0x3b6533aa 0x3b64f000 + 17322
-6   libxpc.dylib                  	0x3b65193e 0x3b64f000 + 10558
-7   libdispatch.dylib             	0x3b50bd42 0x3b500000 + 48450
-8   libdispatch.dylib             	0x3b508256 0x3b500000 + 33366
-9   libdispatch.dylib             	0x3b50bf8c 0x3b500000 + 49036
-10  libdispatch.dylib             	0x3b508256 0x3b500000 + 33366
-11  libdispatch.dylib             	0x3b508096 0x3b500000 + 32918
-12  libdispatch.dylib             	0x3b508256 0x3b500000 + 33366
-13  libdispatch.dylib             	0x3b508096 0x3b500000 + 32918
-14  libdispatch.dylib             	0x3b508d12 0x3b500000 + 36114
-15  libdispatch.dylib             	0x3b508f88 0x3b500000 + 36744
-16  libsystem_pthread.dylib       	0x3b643dbc 0x3b643000 + 3516
-17  libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+0   libsystem_kernel.dylib        	0x3b5caaf4 semaphore_timedwait_trap + 8
+1   libdispatch.dylib             	0x3b509428 _dispatch_semaphore_wait_slow + 120
+2   CoreLocation                  	0x310fcc88 ___lldb_unnamed_function15$$CoreLocation + 312
+3   CoreLocation                  	0x311016e8 ___lldb_unnamed_function64$$CoreLocation + 464
+4   CoreLocation                  	0x3112dba8 ___lldb_unnamed_function1159$$CoreLocation + 388
+5   libxpc.dylib                  	0x3b6533aa _xpc_connection_call_event_handler + 38
+6   libxpc.dylib                  	0x3b65193e _xpc_connection_mach_event + 1818
+7   libdispatch.dylib             	0x3b50bd42 _dispatch_mach_msg_invoke$VARIANT$mp + 114
+8   libdispatch.dylib             	0x3b508256 _dispatch_queue_drain$VARIANT$mp + 310
+9   libdispatch.dylib             	0x3b50bf8c _dispatch_mach_invoke$VARIANT$mp + 76
+10  libdispatch.dylib             	0x3b508256 _dispatch_queue_drain$VARIANT$mp + 310
+11  libdispatch.dylib             	0x3b508096 _dispatch_queue_invoke$VARIANT$mp + 38
+12  libdispatch.dylib             	0x3b508256 _dispatch_queue_drain$VARIANT$mp + 310
+13  libdispatch.dylib             	0x3b508096 _dispatch_queue_invoke$VARIANT$mp + 38
+14  libdispatch.dylib             	0x3b508d12 _dispatch_root_queue_drain + 74
+15  libdispatch.dylib             	0x3b508f88 _dispatch_worker_thread2 + 52
+16  libsystem_pthread.dylib       	0x3b643dbc _pthread_wqthread + 296
+17  libsystem_pthread.dylib       	0x3b643c80 start_wqthread + 4
 
 Thread 8:
-0   libsystem_kernel.dylib        	0x3b5ddc7c 0x3b5ca000 + 81020
-1   libsystem_pthread.dylib       	0x3b643dc6 0x3b643000 + 3526
-2   libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+0   libsystem_kernel.dylib        	0x3b5ddc7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3b643dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3b643c80 start_wqthread + 4
 
 Thread 9:
-0   libsystem_kernel.dylib        	0x3b5ddc7c 0x3b5ca000 + 81020
-1   libsystem_pthread.dylib       	0x3b643dc6 0x3b643000 + 3526
-2   libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+0   libsystem_kernel.dylib        	0x3b5ddc7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3b643dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3b643c80 start_wqthread + 4
 
 Thread 10:
-0   libsystem_kernel.dylib        	0x3b5ddc7c 0x3b5ca000 + 81020
-1   libsystem_pthread.dylib       	0x3b643dc6 0x3b643000 + 3526
-2   libsystem_pthread.dylib       	0x3b643c80 0x3b643000 + 3200
+0   libsystem_kernel.dylib        	0x3b5ddc7c __workq_kernreturn + 8
+1   libsystem_pthread.dylib       	0x3b643dc6 _pthread_wqthread + 306
+2   libsystem_pthread.dylib       	0x3b643c80 start_wqthread + 4
 
 Thread 0 crashed with ARM Thread State (32-bit):
     r0: 0x18dcd8c0    r1: 0x375229e9      r2: 0x1e8480d0      r3: 0x1eea0a60
